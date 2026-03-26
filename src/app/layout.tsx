@@ -29,12 +29,36 @@ export const metadata: Metadata = {
     "lissage premium",
     "protocole lissage",
   ],
+  icons: {
+    icon: [
+      { url: "/favicon.png", sizes: "32x32", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: "/apple-icon.png",
+  },
   openGraph: {
-    title: "Lissage sur Mesure | La Solution pour vos Cheveux",
+    title: "Lissage sur Mesure — La Solution pour vos Cheveux",
     description:
       "Formation professionnelle de lissage capillaire sur mesure. Expertise unique cheveux blonds & décolorés. Éligible CPF.",
     type: "website",
     locale: "fr_FR",
+    url: "https://www.lissage-sur-mesure.com",
+    siteName: "Lissage sur Mesure",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1024,
+        height: 1024,
+        alt: "Lissage sur Mesure — La Solution pour vos Cheveux",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Lissage sur Mesure — La Solution pour vos Cheveux",
+    description:
+      "Formation professionnelle de lissage capillaire sur mesure. Expertise unique cheveux blonds & décolorés. Éligible CPF.",
+    images: ["/og-image.jpg"],
   },
 };
 
