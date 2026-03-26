@@ -107,7 +107,7 @@ export default function RendezVous() {
                   Nous contacter sur WhatsApp
                 </a>
 
-                <p className="text-[var(--color-gray-400)] text-xs mt-6">
+                <p className="text-[var(--color-gray-400)] text-sm mt-6">
                   +33 6 12 28 75 11
                 </p>
               </div>

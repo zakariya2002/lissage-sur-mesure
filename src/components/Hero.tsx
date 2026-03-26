@@ -114,22 +114,21 @@ export default function Hero() {
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <a
-              href="#formule"
+              href="#rendez-vous"
               className="group relative px-10 py-4 bg-white text-[var(--color-black)] font-medium text-[11px] uppercase tracking-[0.2em] overflow-hidden transition-colors duration-500"
             >
-              {/* Fill animation au hover */}
               <span className="absolute inset-0 bg-[var(--color-black)] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]" />
               <span className="relative z-10 group-hover:text-white transition-colors duration-500">
-                Découvrir la méthode
+                Réserver un appel
               </span>
             </a>
             <a
-              href="#rendez-vous"
+              href="#formule"
               className="group relative px-10 py-4 border border-white/20 text-white font-medium text-[11px] uppercase tracking-[0.2em] overflow-hidden transition-all duration-500"
             >
               <span className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]" />
               <span className="relative z-10 group-hover:text-[var(--color-black)] transition-colors duration-500">
-                Réserver un appel
+                Découvrir la méthode
               </span>
             </a>
           </motion.div>
