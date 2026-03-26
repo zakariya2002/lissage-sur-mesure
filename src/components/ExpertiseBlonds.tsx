@@ -102,7 +102,7 @@ export default function ExpertiseBlonds() {
 
         {/* Section WhatsApp complète */}
         <div id="rendez-vous" className="mt-16">
-          <ScrollReveal className="mb-14">
+          <div className="mb-14">
             <div className="relative overflow-hidden">
               <Image
                 src="/images/hero-bg.jpg"
@@ -129,11 +129,11 @@ export default function ExpertiseBlonds() {
                 </p>
               </div>
             </div>
-          </ScrollReveal>
+          </div>
 
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
-              <ScrollReveal direction="left">
+              <div>
                 <p className="text-[var(--color-bordeaux)] text-[11px] font-medium tracking-[0.3em] uppercase mb-6">
                   Ce que comprend l&apos;échange
                 </p>
@@ -162,11 +162,11 @@ export default function ExpertiseBlonds() {
                     — Professionnelle en reconversion
                   </p>
                 </div>
-              </ScrollReveal>
+              </div>
             </div>
 
             <div>
-              <ScrollReveal direction="right" delay={0.2}>
+              <div>
                 <div className="bg-[var(--color-gray-100)] p-10 md:p-14 text-center">
                   <div className="w-20 h-20 mx-auto mb-8 bg-[#25D366] rounded-full flex items-center justify-center">
                     <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -210,7 +210,7 @@ export default function ExpertiseBlonds() {
                     </a>
                   </div>
                 </div>
-              </ScrollReveal>
+              </div>
             </div>
           </div>
         </div>

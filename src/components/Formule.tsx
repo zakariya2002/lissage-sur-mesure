@@ -1,18 +1,27 @@
 "use client";
 
 import Image from "next/image";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import ScrollReveal, { AnimatedLine } from "./ScrollReveal";
 
 export default function Formule() {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start end", "end start"],
   });
-  const imageY = useTransform(scrollYProgress, [0, 1], [40, -40]);
-  const textY = useTransform(scrollYProgress, [0, 1], [20, -20]);
+  const imageY = useTransform(scrollYProgress, [0, 1], isMobile ? [0, 0] : [40, -40]);
+  const textY = useTransform(scrollYProgress, [0, 1], isMobile ? [0, 0] : [20, -20]);
 
   return (
     <section ref={sectionRef} id="formule" className="py-16 md:py-20 bg-white overflow-hidden">
