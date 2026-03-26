@@ -18,7 +18,6 @@ const ROMAN_TOTAL = "V";
 export default function Actifs() {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  /* Clic sur une carte → avance d'un cran de scroll */
   const handleCardClick = useCallback(() => {
     const container = containerRef.current;
     if (!container) return;
@@ -44,21 +43,14 @@ export default function Actifs() {
     const step = progress * (numCards - 1);
 
     cards.forEach((card, i) => {
-      /*
-       * DOM : i=0 → V (bas), i=4 → I (haut, part en premier)
-       * La carte i glisse quand : i > numCards - 1 - step
-       * La carte 0 (V) ne glisse jamais
-       */
       const shouldSlide = i > 0 && i > numCards - 1 - step;
 
       if (shouldSlide) {
-        /* ↓ Scroll bas : monte avec bounce + disparaît */
         card.style.transition =
           "transform 1.3s cubic-bezier(0.9,-0.2,0.1,1.2), opacity 0.5s ease";
         card.style.transform = "translate(-50%, -280%)";
         card.style.opacity = "0";
       } else {
-        /* ↑ Scroll haut : apparaît en fondu au centre (pas de slide visible) */
         card.style.transition = "opacity 0.5s ease";
         card.style.transform = "translate(-50%, -50%)";
         card.style.opacity = "1";
@@ -74,7 +66,7 @@ export default function Actifs() {
 
   return (
     <section id="actifs" className="bg-[var(--color-gray-100)]">
-      {/* ── Titre — fond solide + z-index pour rester au-dessus des cartes ── */}
+      {/* ── Titre ── */}
       <div
         style={{
           position: "relative",
@@ -98,10 +90,10 @@ export default function Actifs() {
         </div>
       </div>
 
-      {/* ── Zone de scroll réduite : 250vh au lieu de 750vh ── */}
+      {/* ── Cartes empilées — hauteur réduite sur mobile ── */}
       <div
         ref={containerRef}
-        style={{ position: "relative", height: "250vh" }}
+        className="relative h-[180vh] md:h-[250vh]"
       >
         <div
           style={{
@@ -131,7 +123,6 @@ export default function Actifs() {
                 zIndex: index + 1,
               }}
             >
-              {/* Ombre */}
               <div
                 style={{
                   position: "absolute",
@@ -145,7 +136,6 @@ export default function Actifs() {
                   borderRadius: "1rem",
                 }}
               />
-              {/* Carte */}
               <div
                 style={{
                   position: "relative",

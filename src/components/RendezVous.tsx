@@ -1,56 +1,19 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
 import Image from "next/image";
 import ScrollReveal from "./ScrollReveal";
 
-interface FormData { prenom: string; nom: string; telephone: string; email: string; statut: string; creneau: string; message: string; consentement: boolean; }
-interface FormErrors { [key: string]: string; }
+const WHATSAPP_NUMBER = "33612287511";
+const WHATSAPP_MESSAGE = encodeURIComponent(
+  "Bonjour, je souhaite en savoir plus sur la formation Lissage sur Mesure."
+);
+const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
 
 export default function RendezVous() {
-  const [formData, setFormData] = useState<FormData>({ prenom: "", nom: "", telephone: "", email: "", statut: "", creneau: "", message: "", consentement: false });
-  const [errors, setErrors] = useState<FormErrors>({});
-  const [submitted, setSubmitted] = useState(false);
-
-  const validate = (): boolean => {
-    const e: FormErrors = {};
-    if (!formData.prenom.trim()) e.prenom = "Requis";
-    if (!formData.nom.trim()) e.nom = "Requis";
-    if (!formData.telephone.trim()) e.telephone = "Requis";
-    else if (!/^[\d\s+()-]{8,}$/.test(formData.telephone)) e.telephone = "Numéro invalide";
-    if (!formData.email.trim()) e.email = "Requis";
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) e.email = "Email invalide";
-    if (!formData.statut) e.statut = "Requis";
-    if (!formData.consentement) e.consentement = "Vous devez accepter pour continuer";
-    setErrors(e);
-    return Object.keys(e).length === 0;
-  };
-
-  const handleSubmit = (ev: FormEvent) => { ev.preventDefault(); if (validate()) { console.log("Form:", formData); setSubmitted(true); } };
-  const handleChange = (f: keyof FormData, v: string | boolean) => { setFormData(p => ({ ...p, [f]: f === "consentement" ? v === "true" || v === true : v })); if (errors[f]) setErrors(p => { const n = { ...p }; delete n[f]; return n; }); };
-
-  const ic = (f: string) => `w-full px-4 py-3.5 border ${errors[f] ? "border-[var(--color-black)] bg-[var(--color-gray-100)]" : "border-[var(--color-gray-200)] bg-white"} text-[var(--color-black)] text-sm placeholder-[var(--color-gray-400)] focus:outline-none focus:border-[var(--color-black)] transition-all`;
-
-  if (submitted) {
-    return (
-      <section id="rendez-vous" className="py-14 md:py-20 bg-white">
-        <div className="max-w-2xl mx-auto px-6 text-center">
-          <div className="bg-[var(--color-gray-100)] p-14 border border-[var(--color-gray-200)]">
-            <div className="w-12 h-12 mx-auto mb-6 bg-[var(--color-black)] flex items-center justify-center">
-              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 13l4 4L19 7" /></svg>
-            </div>
-            <h3 className="font-serif text-2xl text-[var(--color-black)] mb-4">Demande envoyée</h3>
-            <p className="text-[var(--color-gray-500)] text-sm">Nous vous recontacterons dans les plus brefs délais.</p>
-          </div>
-        </div>
-      </section>
-    );
-  }
-
   return (
     <section id="rendez-vous" className="py-14 md:py-20 bg-white">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
-        {/* Bandeau titre — image de fond */}
+        {/* Bandeau titre */}
         <ScrollReveal className="mb-14">
           <div className="relative overflow-hidden">
             <Image
@@ -71,7 +34,7 @@ export default function RendezVous() {
                 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 leading-tight"
                 style={{ color: "#FFFFFF" }}
               >
-                Réservez votre appel téléphonique
+                Échangeons sur WhatsApp
               </h2>
               <p className="text-white text-base max-w-lg mx-auto leading-relaxed drop-shadow-md">
                 15 à 20 minutes pour discuter de la formation, du protocole et du financement CPF. Sans engagement.
@@ -80,11 +43,11 @@ export default function RendezVous() {
           </div>
         </ScrollReveal>
 
-        <div className="grid lg:grid-cols-5 gap-12 lg:gap-16">
-          <div className="lg:col-span-2">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div>
             <ScrollReveal direction="left">
               <p className="text-[var(--color-bordeaux)] text-[11px] font-medium tracking-[0.3em] uppercase mb-6">
-                Ce que comprend l&apos;appel
+                Ce que comprend l&apos;échange
               </p>
               <div className="space-y-3 mb-10">
                 {[
@@ -105,7 +68,7 @@ export default function RendezVous() {
               {/* Témoignage */}
               <div className="border-l-2 border-[var(--color-black)] pl-6">
                 <p className="text-[var(--color-gray-600)] text-sm font-serif italic leading-relaxed">
-                  &ldquo;Un simple appel m&apos;a permis de comprendre tout le programme
+                  &ldquo;Un simple échange m&apos;a permis de comprendre tout le programme
                   et de lancer mon inscription CPF en quelques jours.&rdquo;
                 </p>
                 <p className="text-[var(--color-gray-400)] text-xs mt-3 tracking-wider uppercase">
@@ -115,83 +78,39 @@ export default function RendezVous() {
             </ScrollReveal>
           </div>
 
-          <div className="lg:col-span-3">
+          <div>
             <ScrollReveal direction="right" delay={0.2}>
-              <form onSubmit={handleSubmit} className="bg-[var(--color-gray-100)] p-8 md:p-10">
-                <div className="grid sm:grid-cols-2 gap-4 mb-4">
-                  <div>
-                    <label className="block text-[11px] font-medium text-[var(--color-black)] mb-2 tracking-[0.15em] uppercase">Prénom *</label>
-                    <input type="text" placeholder="Votre prénom" className={ic("prenom")} value={formData.prenom} onChange={e => handleChange("prenom", e.target.value)} />
-                    {errors.prenom && <p className="mt-1 text-[11px] text-[var(--color-black)]">{errors.prenom}</p>}
-                  </div>
-                  <div>
-                    <label className="block text-[11px] font-medium text-[var(--color-black)] mb-2 tracking-[0.15em] uppercase">Nom *</label>
-                    <input type="text" placeholder="Votre nom" className={ic("nom")} value={formData.nom} onChange={e => handleChange("nom", e.target.value)} />
-                    {errors.nom && <p className="mt-1 text-[11px] text-[var(--color-black)]">{errors.nom}</p>}
-                  </div>
-                </div>
-                <div className="grid sm:grid-cols-2 gap-4 mb-4">
-                  <div>
-                    <label className="block text-[11px] font-medium text-[var(--color-black)] mb-2 tracking-[0.15em] uppercase">Téléphone *</label>
-                    <input type="tel" placeholder="06 00 00 00 00" className={ic("telephone")} value={formData.telephone} onChange={e => handleChange("telephone", e.target.value)} />
-                    {errors.telephone && <p className="mt-1 text-[11px] text-[var(--color-black)]">{errors.telephone}</p>}
-                  </div>
-                  <div>
-                    <label className="block text-[11px] font-medium text-[var(--color-black)] mb-2 tracking-[0.15em] uppercase">Email *</label>
-                    <input type="email" placeholder="votre@email.com" className={ic("email")} value={formData.email} onChange={e => handleChange("email", e.target.value)} />
-                    {errors.email && <p className="mt-1 text-[11px] text-[var(--color-black)]">{errors.email}</p>}
-                  </div>
-                </div>
-                <div className="mb-4">
-                  <label className="block text-[11px] font-medium text-[var(--color-black)] mb-2 tracking-[0.15em] uppercase">Vous êtes *</label>
-                  <select className={ic("statut")} value={formData.statut} onChange={e => handleChange("statut", e.target.value)}>
-                    <option value="">Sélectionnez votre statut</option>
-                    <option value="coiffeur">Coiffeur / Coiffeuse en salon</option>
-                    <option value="futur-coiffeur">Futur(e) coiffeur(se) / En reconversion</option>
-                    <option value="independant">Professionnel(le) indépendant(e)</option>
-                    <option value="autre">Autre</option>
-                  </select>
-                  {errors.statut && <p className="mt-1 text-[11px] text-[var(--color-black)]">{errors.statut}</p>}
-                </div>
-                <div className="mb-4">
-                  <label className="block text-[11px] font-medium text-[var(--color-black)] mb-2 tracking-[0.15em] uppercase">Créneau souhaité</label>
-                  <select className={ic("creneau")} value={formData.creneau} onChange={e => handleChange("creneau", e.target.value)}>
-                    <option value="">Pas de préférence</option>
-                    <option value="matin">Matin (9h - 12h)</option>
-                    <option value="apres-midi">Après-midi (14h - 17h)</option>
-                    <option value="soir">Fin de journée (17h - 19h)</option>
-                  </select>
-                </div>
-                <div className="mb-6">
-                  <label className="block text-[11px] font-medium text-[var(--color-black)] mb-2 tracking-[0.15em] uppercase">Votre message</label>
-                  <textarea rows={4} placeholder="Décrivez-nous vos besoins..." className={ic("message")} value={formData.message} onChange={e => handleChange("message", e.target.value)} />
-                </div>
-                {/* Checkbox consentement RGPD */}
-                <div className="mb-6">
-                  <label className="flex items-start gap-3 cursor-pointer">
-                    <input
-                      type="checkbox"
-                      checked={formData.consentement}
-                      onChange={e => handleChange("consentement", e.target.checked ? "true" : "")}
-                      className="mt-1 w-4 h-4 accent-[var(--color-black)] shrink-0"
-                    />
-                    <span className="text-[11px] text-[var(--color-gray-500)] leading-relaxed">
-                      J&apos;accepte que mes données personnelles soient traitées par Lissage sur Mesure
-                      dans le but de recevoir un rappel téléphonique. Ces données seront conservées
-                      12 mois maximum et ne seront pas cédées à des tiers. Je dispose d&apos;un droit
-                      d&apos;accès, de rectification et de suppression (voir{" "}
-                      <a href="/confidentialite" className="text-[var(--color-black)] underline" target="_blank">
-                        politique de confidentialité
-                      </a>). *
-                    </span>
-                  </label>
-                  {errors.consentement && <p className="mt-1 text-[11px] text-[var(--color-black)] ml-7">{errors.consentement}</p>}
+              <div className="bg-[var(--color-gray-100)] p-10 md:p-14 text-center">
+                {/* WhatsApp icon */}
+                <div className="w-20 h-20 mx-auto mb-8 bg-[#25D366] rounded-full flex items-center justify-center">
+                  <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                  </svg>
                 </div>
 
-                <button type="submit" className="w-full py-4 bg-[var(--color-black)] text-white font-medium text-[11px] uppercase tracking-[0.2em] hover:bg-[var(--color-gray-800)] transition-all duration-300 active:scale-[0.99]">
-                  Demander un rappel téléphonique
-                </button>
-              </form>
+                <h3 className="font-serif text-2xl md:text-3xl text-[var(--color-black)] mb-4">
+                  Écrivez-nous directement
+                </h3>
+                <p className="text-[var(--color-gray-500)] text-sm leading-relaxed mb-8 max-w-sm mx-auto">
+                  Posez vos questions, obtenez des réponses rapides et personnalisées. Nous vous répondons sous 24h.
+                </p>
+
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 px-10 py-4 bg-[#25D366] text-white font-medium text-[11px] uppercase tracking-[0.2em] hover:bg-[#1da851] transition-all duration-300 active:scale-[0.98]"
+                >
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                  </svg>
+                  Nous contacter sur WhatsApp
+                </a>
+
+                <p className="text-[var(--color-gray-400)] text-xs mt-6">
+                  +33 6 12 28 75 11
+                </p>
+              </div>
             </ScrollReveal>
           </div>
         </div>
