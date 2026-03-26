@@ -93,7 +93,7 @@ export default function Actifs() {
       {/* ── Cartes empilées — hauteur réduite sur mobile ── */}
       <div
         ref={containerRef}
-        className="relative h-[180vh] md:h-[250vh]"
+        className="relative h-[350vh] md:h-[250vh]"
       >
         <div
           style={{
@@ -179,7 +179,7 @@ export default function Actifs() {
       </div>
 
       {/* ── CTA ── */}
-      <div className="py-16 md:py-20 text-center">
+      <div className="relative z-10 bg-[var(--color-gray-100)] py-16 md:py-20 text-center">
         <ScrollReveal>
           <a
             href="#rendez-vous"

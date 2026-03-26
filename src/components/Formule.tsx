@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import ScrollReveal, { AnimatedLine, StaggerContainer, StaggerItem } from "./ScrollReveal";
+import ScrollReveal, { AnimatedLine } from "./ScrollReveal";
 
 export default function Formule() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -78,41 +78,6 @@ export default function Formule() {
           </motion.div>
         </div>
 
-        {/* Résultats — redesign : plus aéré, plus lisible, avec icônes */}
-        <ScrollReveal delay={0.3} className="mt-24">
-          <div className="border border-[var(--color-gray-200)] p-10 md:p-16 bg-white">
-            <div className="text-center mb-12">
-              <p className="text-[var(--color-bordeaux)] text-[11px] tracking-[0.3em] uppercase mb-4">
-                Les résultats
-              </p>
-              <h3 className="font-serif text-2xl md:text-4xl font-light text-[var(--color-black)] leading-tight">
-                Ce que ça change
-              </h3>
-            </div>
-            <StaggerContainer
-              className="grid sm:grid-cols-2 gap-5 max-w-3xl mx-auto"
-              staggerDelay={0.12}
-            >
-              {[
-                { text: "Le cheveu est discipliné mais vivant", icon: "01" },
-                { text: "Il est lisse sans être écrasé", icon: "02" },
-                { text: "Il garde sa souplesse et sa densité", icon: "03" },
-                { text: "Il est respecté sur le long terme", icon: "04" },
-              ].map((item, i) => (
-                <StaggerItem key={i}>
-                  <div className="flex items-start gap-5 p-6 bg-[var(--color-gray-100)] hover:bg-[var(--color-black)] group transition-colors duration-500">
-                    <span className="text-[var(--color-black)] font-serif text-2xl shrink-0 leading-none transition-colors duration-500">
-                      {item.icon}
-                    </span>
-                    <p className="text-[var(--color-black)] group-hover:text-white text-base leading-relaxed transition-colors duration-500">
-                      {item.text}
-                    </p>
-                  </div>
-                </StaggerItem>
-              ))}
-            </StaggerContainer>
-          </div>
-        </ScrollReveal>
       </div>
     </section>
   );
