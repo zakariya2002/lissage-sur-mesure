@@ -9,7 +9,6 @@ import Produit from "@/components/Produit";
 import Actifs from "@/components/Actifs";
 import ExpertiseBlonds from "@/components/ExpertiseBlonds";
 import Formation from "@/components/Formation";
-import RendezVous from "@/components/RendezVous";
 import Vision from "@/components/Vision";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
@@ -26,7 +25,6 @@ export default function Home() {
         <Actifs />
         <ExpertiseBlonds />
         <Formation />
-        <RendezVous />
         <Vision />
         <FAQ />
       </main>
