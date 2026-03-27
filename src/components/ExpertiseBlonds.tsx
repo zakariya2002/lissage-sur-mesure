@@ -110,6 +110,7 @@ export default function ExpertiseBlonds() {
                 width={1200}
                 height={500}
                 className="absolute inset-0 w-full h-full object-cover"
+                sizes="100vw"
               />
               <div className="absolute inset-0 bg-black/80" />
               <div className="relative z-10 p-12 md:p-16 text-center">

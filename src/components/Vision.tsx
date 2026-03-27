@@ -79,6 +79,7 @@ export default function Vision() {
                   width={1024}
                   height={1024}
                   className="w-full h-full object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
             </ScrollReveal>

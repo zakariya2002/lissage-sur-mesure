@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 
 export default function Footer() {
@@ -11,7 +9,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-12">
           {/* Marque */}
           <div>
-            <Image src="/images/logo-white.png" alt="Lissage sur Mesure" width={200} height={56} className="h-12 w-auto mb-6" />
+            <Image src="/images/logo-white.png" alt="Lissage sur Mesure" width={200} height={56} className="h-12 w-auto mb-6" sizes="150px" />
             <p className="text-[11px] leading-relaxed mb-6 text-white/30">
               Formation et protocole de lissage premium. Une approche sur mesure, respectueuse de chaque fibre capillaire.
             </p>

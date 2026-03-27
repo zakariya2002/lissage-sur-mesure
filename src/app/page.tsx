@@ -1,19 +1,19 @@
-"use client";
-
+import dynamic from "next/dynamic";
 import SmoothScroll from "@/components/SmoothScroll";
-import CookieBanner from "@/components/CookieBanner";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import Activites from "@/components/Activites";
-import Formule from "@/components/Formule";
-import Lissage from "@/components/Lissage";
-import Produit from "@/components/Produit";
-import Actifs from "@/components/Actifs";
-import ExpertiseBlonds from "@/components/ExpertiseBlonds";
-import Formation from "@/components/Formation";
-import Vision from "@/components/Vision";
-import FAQ from "@/components/FAQ";
-import Footer from "@/components/Footer";
+
+const Activites = dynamic(() => import("@/components/Activites"));
+const Formule = dynamic(() => import("@/components/Formule"));
+const Produit = dynamic(() => import("@/components/Produit"));
+const Actifs = dynamic(() => import("@/components/Actifs"));
+const Lissage = dynamic(() => import("@/components/Lissage"));
+const ExpertiseBlonds = dynamic(() => import("@/components/ExpertiseBlonds"));
+const Formation = dynamic(() => import("@/components/Formation"));
+const Vision = dynamic(() => import("@/components/Vision"));
+const FAQ = dynamic(() => import("@/components/FAQ"));
+const Footer = dynamic(() => import("@/components/Footer"));
+const CookieBanner = dynamic(() => import("@/components/CookieBanner"));
 
 export default function Home() {
   return (
@@ -23,10 +23,10 @@ export default function Home() {
       <main>
         <Hero />
         <Activites />
+        <Lissage />
         <Formule />
         <Produit />
         <Actifs />
-        <Lissage />
         <ExpertiseBlonds />
         <Formation />
         <Vision />

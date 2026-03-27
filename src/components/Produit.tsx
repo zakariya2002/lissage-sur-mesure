@@ -99,7 +99,7 @@ const packs: Pack[] = [
     id: "sur-mesure",
     nom: "Lissage Sur Mesure",
     sousTitre: "La r\u00e9f\u00e9rence du lissage personnalis\u00e9",
-    prix: "220 \u20ac HT",
+    prix: "220 \u20ac TTC",
     image: "/images/product-shoot-white.png",
     imageAlt: "Produit Lissage sur Mesure",
     contenu: "Produit de lissage Sur Mesure + Shampoing clarifiant — jusqu\u2019\u00e0 10 lissages par pack",
@@ -119,7 +119,7 @@ const packs: Pack[] = [
     id: "silk",
     nom: "Lissage SILK",
     sousTitre: "Sp\u00e9cial coloration et d\u00e9coloration",
-    prix: "230 \u20ac HT",
+    prix: "230 \u20ac TTC",
     image: "/images/product-shoot-white-v2.png",
     imageAlt: "Produit Lissage SILK",
     contenu: "Produit de lissage SILK + Shampoing clarifiant — jusqu\u2019\u00e0 10 lissages par pack",
@@ -285,6 +285,7 @@ export default function Produit() {
                       width={600}
                       height={600}
                       className="w-full max-w-md h-auto object-contain"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                     {/* Badge prix */}
                     <div className="absolute bottom-4 right-4 bg-[var(--color-black)] text-white px-5 py-2.5">

@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 
 const modules = [
@@ -32,7 +30,7 @@ export default function Formation() {
               <div className="inline-block border border-[var(--color-gray-200)] bg-white px-8 py-5">
                 <p className="text-[10px] text-[var(--color-gray-400)] tracking-[0.25em] uppercase mb-1">Tarif formation</p>
                 <p className="font-serif text-3xl md:text-4xl font-light text-[var(--color-black)] leading-none">
-                  1&nbsp;500&nbsp;<span className="text-xl">€</span>&nbsp;<span className="text-base text-[var(--color-gray-400)] font-sans">HT</span>
+                  1&nbsp;500&nbsp;<span className="text-xl">€</span>&nbsp;<span className="text-base text-[var(--color-gray-400)] font-sans">TTC</span>
                 </p>
                 <p className="text-[10px] text-[var(--color-gray-400)] mt-1.5">Financement CPF &amp; OPCO possible</p>
               </div>
@@ -47,6 +45,7 @@ export default function Formation() {
                   width={120}
                   height={120}
                   className="w-16 h-16 object-contain mx-auto mb-3"
+                  sizes="64px"
                 />
                 <p className="text-[var(--color-black)] font-semibold text-sm mb-1">Éligible CPF</p>
                 <p className="text-[var(--color-gray-500)] text-xs leading-relaxed">
@@ -103,7 +102,7 @@ export default function Formation() {
                   Un seul pack, cinq fois votre investissement
                 </h3>
                 <p className="text-white/80 text-sm md:text-base leading-relaxed mb-6">
-                  Chaque pack à 220&nbsp;€ HT comprend le produit de lissage + un shampoing
+                  Chaque pack à 220&nbsp;€ TTC comprend le produit de lissage + un shampoing
                   clarifiant, et permet de réaliser jusqu&apos;à 10 lissages clients.
                   À ~120&nbsp;€ le lissage, c&apos;est 1&nbsp;200&nbsp;€ de chiffre d&apos;affaires
                   généré — soit un rendement multiplié par 5.
@@ -194,7 +193,7 @@ export default function Formation() {
               Prêt(e) à maîtriser le lissage sur mesure ?
             </h3>
             <p className="text-[var(--color-gray-500)] mb-3 max-w-md mx-auto text-sm leading-relaxed">
-              Formation à <strong className="text-[var(--color-black)]">1&nbsp;500&nbsp;€ HT</strong> — finançable via CPF ou OPCO.
+              Formation à <strong className="text-[var(--color-black)]">1&nbsp;500&nbsp;€ TTC</strong> — finançable via CPF ou OPCO.
               Réservez un appel de 15 minutes pour discuter de votre projet,
               vos objectifs et les options de financement.
             </p>

@@ -78,6 +78,7 @@ export default function Formule() {
                     width={1024}
                     height={1024}
                     className="w-full h-auto object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
                 {/* Cadre décoratif */}

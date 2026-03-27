@@ -46,6 +46,7 @@ export default function Hero() {
             alt="Lissage sur Mesure"
             fill
             className="object-cover"
+            sizes="100vw"
             priority
             quality={90}
           />
@@ -75,6 +76,7 @@ export default function Hero() {
               width={500}
               height={220}
               className="mx-auto w-64 md:w-80 lg:w-96 h-auto"
+              sizes="(max-width: 768px) 256px, (max-width: 1024px) 320px, 384px"
               priority
             />
           </motion.div>

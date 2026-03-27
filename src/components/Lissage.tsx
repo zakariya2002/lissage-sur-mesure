@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import ScrollReveal, { AnimatedLine } from "./ScrollReveal";
 
@@ -37,6 +35,7 @@ export default function Lissage() {
                   width={800}
                   height={1000}
                   className="w-full h-auto object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
               <div className="absolute -bottom-4 -right-4 w-full h-full border border-[var(--color-gray-200)] -z-10" />
