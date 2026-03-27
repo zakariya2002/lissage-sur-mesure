@@ -18,7 +18,7 @@ const activites = [
   {
     titre: "Nos Lissages",
     description:
-      "Des lissages sur mesure dans notre salon à Aulnay-sous-Bois, adaptés à chaque nature de cheveu. Un diagnostic personnalisé pour un résultat naturel et durable.",
+      "Des lissages sur mesure dans notre salon en Île-de-France, adaptés à chaque nature de cheveu. Un diagnostic personnalisé pour un résultat naturel et durable.",
     href: "#lissage",
     cta: "En savoir plus",
     icon: (
