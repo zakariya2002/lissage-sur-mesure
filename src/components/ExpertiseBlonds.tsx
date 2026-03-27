@@ -64,7 +64,7 @@ export default function ExpertiseBlonds() {
             </ul>
           </div>
 
-          <div className="bg-[var(--color-bordeaux)] p-8 md:p-10 lg:p-12 h-full text-white">
+          <div className="bg-[var(--color-black)] p-8 md:p-10 lg:p-12 h-full text-white">
             <div className="flex items-center gap-4 mb-8">
               <span className="font-serif text-4xl text-white">II</span>
               <div>
