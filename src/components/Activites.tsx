@@ -76,23 +76,23 @@ export default function Activites() {
                 delay: i * 0.15,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="group relative bg-[var(--color-gray-100)] p-8 md:p-12 [@media(hover:hover)]:hover:bg-[var(--color-bordeaux)] transition-colors duration-500 flex flex-col"
+              className="group relative bg-[var(--color-gray-100)] p-8 md:p-12 hover:bg-[var(--color-bordeaux)] active:bg-[var(--color-bordeaux)] transition-colors duration-500 flex flex-col"
             >
               {/* Icône */}
-              <span className="text-[var(--color-bordeaux)] group-hover:text-white transition-colors duration-500 mb-5">
+              <span className="text-[var(--color-bordeaux)] group-hover:text-white group-active:text-white transition-colors duration-500 mb-5">
                 {activite.icon}
               </span>
 
-              <h3 className="font-serif text-2xl font-bold text-[var(--color-bordeaux)] group-hover:text-white transition-colors duration-500 mb-4">
+              <h3 className="font-serif text-2xl font-bold text-[var(--color-bordeaux)] group-hover:text-white group-active:text-white transition-colors duration-500 mb-4">
                 {activite.titre}
               </h3>
-              <p className="text-[var(--color-gray-500)] group-hover:text-white/70 text-sm leading-relaxed transition-colors duration-500 mb-8 flex-1">
+              <p className="text-[var(--color-gray-500)] group-hover:text-white/70 group-active:text-white/70 text-sm leading-relaxed transition-colors duration-500 mb-8 flex-1">
                 {activite.description}
               </p>
-              <span className="inline-flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--color-bordeaux)] group-hover:text-white transition-colors duration-500">
+              <span className="inline-flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--color-bordeaux)] group-hover:text-white group-active:text-white transition-colors duration-500">
                 {activite.cta}
                 <svg
-                  className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300"
+                  className="w-4 h-4 transform group-hover:translate-x-1 group-active:translate-x-1 transition-transform duration-300"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
