@@ -3,10 +3,10 @@
 import Image from "next/image";
 
 const modules = [
-  { title: "Diagnostic capillaire avancé", description: "Analyser chaque type de cheveu, sa porosité, son histoire et ses besoins spécifiques." },
-  { title: "Protocole Lissage sur Mesure", description: "Maîtriser la formule, les dosages, les temps de pose et les techniques d'application." },
-  { title: "Expertise cheveux blonds", description: "Module dédié aux cheveux sensibilisés : adaptation du protocole, températures, couleur." },
-  { title: "Pratique & mise en situation", description: "Cas pratiques sur modèles réels pour valider la maîtrise en conditions salon." },
+  { title: "Diagnostic capillaire personnalisé", description: "Apprendre à réaliser un diagnostic capillaire complet : porosité, élasticité, historique chimique et attentes de la cliente. La base de toute prestation sur mesure." },
+  { title: "Protocole Lissage sur Mesure", description: "Formuler un lissage adapté à chaque profil capillaire. Dosages, temps de pose, techniques d'application — tout est ajusté selon le diagnostic et le résultat souhaité." },
+  { title: "Expertise cheveux sensibilisés", description: "Module dédié aux cheveux blonds, colorés ou fragilisés : adapter le protocole sur mesure pour garantir un résultat respectueux de la fibre." },
+  { title: "Pratique & mise en situation", description: "Cas pratiques sur modèles réels : du diagnostic à la réalisation du lissage personnalisé, pour valider votre maîtrise en conditions salon." },
 ];
 
 export default function Formation() {
@@ -20,9 +20,23 @@ export default function Formation() {
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-light text-[var(--color-black)] mb-4 leading-[1.05]">
               Formation Lissage sur Mesure
             </h2>
-            <p className="text-[var(--color-gray-500)] max-w-lg mx-auto text-sm leading-relaxed mb-10">
-              Une formation professionnelle complète pour développer une expertise unique.
+            <p className="text-[var(--color-gray-500)] max-w-lg mx-auto text-sm leading-relaxed mb-6">
+              Formée par une experte du cheveu avec plus de 10 ans d&apos;expérience,
+              cette formation vous enseigne le <strong className="text-[var(--color-black)]">diagnostic capillaire</strong> et
+              la réalisation d&apos;un <strong className="text-[var(--color-black)]">lissage adapté</strong> aux
+              désirs et au profil de chaque cliente. Une approche 100&nbsp;% sur mesure.
             </p>
+
+            {/* Prix */}
+            <div className="mb-10">
+              <div className="inline-block border border-[var(--color-gray-200)] bg-white px-8 py-5">
+                <p className="text-[10px] text-[var(--color-gray-400)] tracking-[0.25em] uppercase mb-1">Tarif formation</p>
+                <p className="font-serif text-3xl md:text-4xl font-light text-[var(--color-black)] leading-none">
+                  1&nbsp;500&nbsp;<span className="text-xl">€</span>&nbsp;<span className="text-base text-[var(--color-gray-400)] font-sans">HT</span>
+                </p>
+                <p className="text-[10px] text-[var(--color-gray-400)] mt-1.5">Financement CPF &amp; OPCO possible</p>
+              </div>
+            </div>
 
             {/* Badges CPF + OPCO — mis en avant */}
             <div className="grid sm:grid-cols-2 gap-4 max-w-lg mx-auto mb-10">
@@ -62,28 +76,42 @@ export default function Formation() {
           </div>
         </div>
 
+        {/* Formatrice */}
+        <div className="border border-[var(--color-gray-200)] bg-white p-8 md:p-10">
+          <div>
+            <p className="text-[11px] text-[var(--color-bordeaux)] tracking-[0.3em] uppercase mb-1">Votre formatrice</p>
+            <p className="text-[var(--color-black)] text-sm md:text-base leading-relaxed">
+              <strong>Experte du cheveu depuis plus de 10 ans</strong>, votre formatrice a développé
+              une méthode fondée sur le <strong>diagnostic capillaire</strong> pour offrir un
+              <strong> lissage adapté</strong> à chaque profil. Son approche sur mesure garantit des résultats
+              respectueux de la fibre capillaire et fidèles aux attentes de chaque cliente.
+            </p>
+          </div>
+        </div>
+
         {/* Rendement */}
         <div className="bg-[var(--color-bordeaux)] text-white p-10 md:p-16 mt-12">
           <div className="max-w-3xl mx-auto">
             <div className="grid md:grid-cols-[auto_1fr] gap-8 md:gap-12 items-center">
               <div className="text-center md:text-left">
                 <p className="font-serif text-7xl md:text-8xl font-bold leading-none">
-                  x9
+                  x5
                 </p>
               </div>
               <div>
                 <h3 className="font-serif text-2xl md:text-3xl font-light mb-4 leading-tight">
-                  Un seul pack, neuf fois votre investissement
+                  Un seul pack, cinq fois votre investissement
                 </h3>
                 <p className="text-white/80 text-sm md:text-base leading-relaxed mb-6">
-                  Après la formation Lissage sur Mesure, chaque pack de produits acheté vous permet de réaliser
-                  plusieurs lissages clients. Résultat : un rendement multiplié par 9 dès le premier achat,
-                  amorti dès votre premier lissage.
+                  Chaque pack à 220&nbsp;€ HT comprend le produit de lissage + un shampoing
+                  clarifiant, et permet de réaliser jusqu&apos;à 10 lissages clients.
+                  À ~120&nbsp;€ le lissage, c&apos;est 1&nbsp;200&nbsp;€ de chiffre d&apos;affaires
+                  généré — soit un rendement multiplié par 5.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <div className="flex items-center gap-3">
-                    <span className="w-8 h-8 border border-white/30 flex items-center justify-center text-xs">1</span>
-                    <span className="text-sm text-white/90">Pack acheté</span>
+                    <span className="w-8 h-8 border border-white/30 flex items-center justify-center text-xs">220€</span>
+                    <span className="text-sm text-white/90">Pack investi</span>
                   </div>
                   <div className="flex items-center gap-2 text-white/40">
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -91,8 +119,8 @@ export default function Formation() {
                     </svg>
                   </div>
                   <div className="flex items-center gap-3">
-                    <span className="w-8 h-8 border border-white/30 flex items-center justify-center text-xs">9x</span>
-                    <span className="text-sm text-white/90">Retour sur investissement</span>
+                    <span className="w-8 h-8 border border-white/30 flex items-center justify-center text-xs">x10</span>
+                    <span className="text-sm text-white/90">Lissages réalisés</span>
                   </div>
                   <div className="flex items-center gap-2 text-white/40">
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -100,8 +128,8 @@ export default function Formation() {
                     </svg>
                   </div>
                   <div className="flex items-center gap-3">
-                    <span className="w-8 h-8 bg-white/10 flex items-center justify-center text-xs">&#10003;</span>
-                    <span className="text-sm text-white/90">Amorti au 1er lissage</span>
+                    <span className="w-8 h-8 bg-white/10 flex items-center justify-center text-xs">1200€</span>
+                    <span className="text-sm text-white/90">CA généré</span>
                   </div>
                 </div>
               </div>
@@ -118,9 +146,9 @@ export default function Formation() {
             </h3>
             <div className="space-y-5">
               {[
-                { label: "Coiffeurs & coiffeuses", desc: "en salon souhaitant élargir leur offre" },
-                { label: "Professionnels de la beauté", desc: "cherchant une spécialisation premium" },
-                { label: "Futurs professionnels", desc: "en reconversion ou en début de carrière" },
+                { label: "Coiffeurs & coiffeuses", desc: "en salon souhaitant proposer un lissage sur mesure, adapté à chaque cliente" },
+                { label: "Professionnels de la beauté", desc: "cherchant à maîtriser le diagnostic capillaire et une spécialisation premium" },
+                { label: "Futurs professionnels", desc: "en reconversion ou en début de carrière, prêts à se former auprès d'une experte" },
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-4 p-5 border-l-2 border-[var(--color-black)] bg-[var(--color-gray-100)]">
                   <div>
@@ -136,7 +164,7 @@ export default function Formation() {
           <div>
             <p className="text-[11px] text-[var(--color-bordeaux)] tracking-[0.3em] uppercase mb-3">Programme</p>
             <h3 className="font-serif text-2xl text-[var(--color-black)] mb-8">
-              Ce que vous apprendrez
+              Du diagnostic au lissage sur mesure
             </h3>
             <div className="space-y-4">
               {modules.map((mod, i) => (
@@ -163,11 +191,15 @@ export default function Formation() {
               Passez à l&apos;action
             </p>
             <h3 className="font-serif text-2xl md:text-3xl font-light text-[var(--color-black)] mb-4 leading-tight">
-              Intéressé(e) par la formation ?
+              Prêt(e) à maîtriser le lissage sur mesure ?
             </h3>
-            <p className="text-[var(--color-gray-500)] mb-8 max-w-md mx-auto text-sm leading-relaxed">
+            <p className="text-[var(--color-gray-500)] mb-3 max-w-md mx-auto text-sm leading-relaxed">
+              Formation à <strong className="text-[var(--color-black)]">1&nbsp;500&nbsp;€ HT</strong> — finançable via CPF ou OPCO.
               Réservez un appel de 15 minutes pour discuter de votre projet,
-              vos objectifs et le financement CPF.
+              vos objectifs et les options de financement.
+            </p>
+            <p className="text-[var(--color-gray-400)] mb-8 max-w-sm mx-auto text-xs leading-relaxed">
+              Diagnostic capillaire, protocole personnalisé, expertise cheveux sensibilisés — formez-vous auprès d&apos;une experte avec 10 ans d&apos;expérience.
             </p>
             <a
               href="#rendez-vous"

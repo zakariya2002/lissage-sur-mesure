@@ -19,8 +19,9 @@ export default function Lissage() {
             Votre lissage <span className="text-[#8B1A3A]">sur mesure</span>
           </h2>
           <p className="text-[var(--color-gray-500)] max-w-xl mx-auto text-base leading-relaxed mb-6">
-            Un lissage professionnel adapté à votre nature de cheveu,
-            réalisé avec notre propre formule.
+            Forte de 10 ans d&apos;expertise capillaire, notre experte réalise
+            un diagnostic approfondi avant chaque soin pour vous proposer
+            un lissage parfaitement adapté à vos cheveux et à vos envies.
           </p>
           <AnimatedLine className="w-20 h-px bg-[var(--color-gray-300)] mx-auto" />
         </ScrollReveal>
@@ -45,35 +46,71 @@ export default function Lissage() {
           {/* Contenu */}
           <ScrollReveal direction="right" delay={0.2}>
             <div className="space-y-8">
+              {/* Diagnostic */}
               <div>
                 <h3 className="font-serif text-2xl md:text-3xl text-[var(--color-black)] mb-4">
-                  Tous types de cheveux
+                  Un diagnostic avant chaque lissage
                 </h3>
                 <p className="text-[var(--color-gray-500)] leading-[1.8]">
                   Cheveux épais, fins, bouclés, crépus, colorés, méchés ou
-                  décolorés — chaque lissage est personnalisé selon un diagnostic
-                  capillaire précis.
+                  décolorés — aucun cheveu ne se traite de la même façon.
+                  C&apos;est pourquoi chaque séance commence par un diagnostic
+                  capillaire complet, réalisé par une experte avec plus de 10 ans
+                  d&apos;expérience.
                 </p>
               </div>
 
-              <div className="space-y-4">
-                {[
-                  "Diagnostic capillaire personnalisé",
-                  "Protocole adapté à votre fibre",
-                  "Formule exclusive Lissage sur Mesure",
-                  "Résultat naturel, souple et durable",
-                  "Respect de la santé du cheveu",
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-4">
-                    <span className="w-6 h-px bg-[var(--color-black)] shrink-0" />
-                    <span className="text-sm text-[var(--color-black)]">{item}</span>
-                  </div>
-                ))}
+              {/* Formule adaptée */}
+              <div className="border-l-2 border-[var(--color-bordeaux)] pl-6">
+                <p className="text-[11px] text-[var(--color-bordeaux)] tracking-[0.3em] uppercase mb-2">
+                  Formule adaptée
+                </p>
+                <p className="text-[var(--color-gray-500)] text-sm leading-[1.8] mb-4">
+                  Contrairement aux lissages classiques où chaque cliente reçoit le même produit,
+                  ici la formule est ajustée selon votre diagnostic&nbsp;:
+                </p>
+                <div className="space-y-2.5">
+                  {[
+                    "Plus douce sur cheveux sensibilisés",
+                    "Plus gainante sur cheveux épais",
+                    "Compatible cheveux blonds ou décolorés — protocole précis",
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-center gap-3">
+                      <span className="w-5 h-px bg-[var(--color-bordeaux)] shrink-0" />
+                      <span className="text-sm text-[var(--color-black)]">{item}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
 
-              <blockquote className="relative pl-6 py-2 border-l border-[var(--color-black)]">
+              {/* Protocole personnalisé */}
+              <div className="border-l-2 border-[var(--color-black)] pl-6">
+                <p className="text-[11px] text-[var(--color-black)] tracking-[0.3em] uppercase mb-2">
+                  Protocole personnalisé
+                </p>
+                <p className="text-[var(--color-gray-500)] text-sm leading-[1.8] mb-4">
+                  Même le geste change selon la cliente. On ne travaille pas une racine
+                  vierge comme des longueurs décolorées&nbsp;:
+                </p>
+                <div className="space-y-2.5">
+                  {[
+                    "Température du fer différente",
+                    "Nombre de passages adapté",
+                    "Temps de pose ajusté",
+                    "Zones traitées différemment — racines / longueurs",
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-center gap-3">
+                      <span className="w-5 h-px bg-[var(--color-black)] shrink-0" />
+                      <span className="text-sm text-[var(--color-black)]">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <blockquote className="relative pl-6 py-2 border-l border-[var(--color-bordeaux)]">
                 <p className="text-lg font-serif italic text-[var(--color-black)] leading-snug">
-                  Chaque cheveu est unique, chaque lissage l&apos;est aussi.
+                  Ici, aucun lissage ne se ressemble. Votre diagnostic guide
+                  tout — c&apos;est la promesse du sur mesure.
                 </p>
               </blockquote>
 
