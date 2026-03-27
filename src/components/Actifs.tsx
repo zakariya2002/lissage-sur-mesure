@@ -183,9 +183,9 @@ export default function Actifs() {
         <ScrollReveal>
           <a
             href="#rendez-vous"
-            className="cta-fill inline-block px-10 py-4 bg-[var(--color-black)] text-white text-[11px] font-medium uppercase tracking-[0.2em]"
+            className="cta-fill inline-block px-10 py-4 bg-[var(--color-bordeaux)] text-white text-[11px] font-medium uppercase tracking-[0.2em]"
           >
-            <span className="cta-bg bg-[var(--color-gray-800)]" />
+            <span className="cta-bg bg-[var(--color-bordeaux-dark,#5a1a2a)]" />
             <span className="cta-text">En savoir plus — Réserver un appel</span>
           </a>
         </ScrollReveal>

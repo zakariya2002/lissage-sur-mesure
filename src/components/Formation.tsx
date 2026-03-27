@@ -53,9 +53,9 @@ export default function Formation() {
             <div className="block">
               <a
                 href="#rendez-vous"
-                className="cta-fill inline-block px-10 py-4 bg-[var(--color-black)] text-white text-[11px] font-medium uppercase tracking-[0.2em]"
+                className="cta-fill inline-block px-10 py-4 bg-[var(--color-bordeaux)] text-white text-[11px] font-medium uppercase tracking-[0.2em]"
               >
-                <span className="cta-bg bg-[var(--color-gray-800)]" />
+                <span className="cta-bg bg-[var(--color-bordeaux-dark,#5a1a2a)]" />
                 <span className="cta-text">Se renseigner sur la formation</span>
               </a>
             </div>
@@ -124,9 +124,9 @@ export default function Formation() {
             </p>
             <a
               href="#rendez-vous"
-              className="cta-fill inline-flex items-center gap-3 px-10 py-4 bg-[var(--color-black)] text-white font-medium text-[11px] uppercase tracking-[0.2em]"
+              className="cta-fill inline-flex items-center gap-3 px-10 py-4 bg-[var(--color-bordeaux)] text-white font-medium text-[11px] uppercase tracking-[0.2em]"
             >
-              <span className="cta-bg bg-[var(--color-gray-800)]" />
+              <span className="cta-bg bg-[var(--color-bordeaux-dark,#5a1a2a)]" />
               <svg className="cta-text w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>

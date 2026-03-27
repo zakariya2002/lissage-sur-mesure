@@ -164,7 +164,7 @@ export default function Produit() {
                   href={googleMapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-3 px-6 py-3.5 bg-[var(--color-black)] text-white text-[11px] font-medium uppercase tracking-[0.15em] hover:bg-[var(--color-gray-800)] transition-colors"
+                  className="flex items-center justify-center gap-3 px-6 py-3.5 bg-[var(--color-bordeaux)] text-white text-[11px] font-medium uppercase tracking-[0.15em] hover:bg-[var(--color-bordeaux-dark,#5a1a2a)] transition-colors"
                 >
                   <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
