@@ -37,7 +37,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo image */}
-          <a href="#" className="block">
+          <a href="/" className="block">
             <Image
               src={scrolled ? "/images/logo-dark.png" : "/images/logo-white.png"}
               alt="Lissage sur Mesure"
