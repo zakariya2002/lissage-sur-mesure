@@ -50,6 +50,22 @@ export default function Formation() {
               </div>
             </div>
 
+            {/* Rendement */}
+            <div className="bg-[var(--color-bordeaux)] text-white p-8 md:p-10 text-center">
+              <p className="text-[11px] font-medium tracking-[0.3em] uppercase mb-4 text-white/60">
+                Rendement
+              </p>
+              <p className="font-serif text-4xl md:text-5xl font-bold mb-3">
+                x9
+              </p>
+              <p className="text-sm md:text-base leading-relaxed max-w-md mx-auto mb-2">
+                Avec un seul pack de produits de lissage acheté, multipliez votre investissement par 9.
+              </p>
+              <p className="text-xs text-white/70 leading-relaxed max-w-md mx-auto">
+                Rendement x9 dès le premier achat — amorti dès le premier lissage après la formation Lissage sur Mesure.
+              </p>
+            </div>
+
             <div className="block">
               <a
                 href="#rendez-vous"
