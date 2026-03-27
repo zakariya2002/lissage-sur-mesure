@@ -69,6 +69,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={`${cormorant.variable} ${dmSans.variable}`}>
+      <head>
+        <meta name="theme-color" content="#0A0A0A" />
+      </head>
       <body className="min-h-screen antialiased">{children}</body>
     </html>
   );
