@@ -110,7 +110,7 @@ export default function Formation() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <div className="flex items-center gap-3">
-                    <span className="w-8 h-8 border border-white/30 flex items-center justify-center text-xs">220€</span>
+                    <span className="min-w-10 h-8 px-2 border border-white/30 flex items-center justify-center text-[10px]">220€</span>
                     <span className="text-sm text-white/90">Pack investi</span>
                   </div>
                   <div className="flex items-center gap-2 text-white/40">
@@ -119,7 +119,7 @@ export default function Formation() {
                     </svg>
                   </div>
                   <div className="flex items-center gap-3">
-                    <span className="w-8 h-8 border border-white/30 flex items-center justify-center text-xs">x10</span>
+                    <span className="min-w-10 h-8 px-2 border border-white/30 flex items-center justify-center text-[10px]">x10</span>
                     <span className="text-sm text-white/90">Lissages réalisés</span>
                   </div>
                   <div className="flex items-center gap-2 text-white/40">
@@ -128,7 +128,7 @@ export default function Formation() {
                     </svg>
                   </div>
                   <div className="flex items-center gap-3">
-                    <span className="w-8 h-8 bg-white/10 flex items-center justify-center text-xs">1200€</span>
+                    <span className="min-w-10 h-8 px-2 bg-white/10 flex items-center justify-center text-[10px]">1200€</span>
                     <span className="text-sm text-white/90">CA généré</span>
                   </div>
                 </div>

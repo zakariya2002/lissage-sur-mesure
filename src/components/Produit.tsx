@@ -362,6 +362,18 @@ export default function Produit() {
                 }`}
               />
             ))}
+          {/* Teaser pack SILK */}
+          {current === 0 && (
+            <button
+              onClick={() => goTo(1)}
+              className="mt-6 mx-auto flex items-center gap-2 text-[var(--color-bordeaux)] hover:text-[var(--color-black)] transition-colors group"
+            >
+              <span className="text-xs tracking-wide">
+                Découvrir le pack <strong>SILK</strong> — spécial coloration
+              </span>
+              <span className="text-lg group-hover:translate-x-1 transition-transform">&rsaquo;</span>
+            </button>
+          )}
           </div>
         </div>
 
