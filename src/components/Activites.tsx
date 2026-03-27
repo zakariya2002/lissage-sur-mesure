@@ -14,7 +14,7 @@ const activites = [
   {
     titre: "Le Lissage",
     description:
-      "Un service de lissage professionnel, adapté à chaque type de cheveu. Résultat naturel et durable.",
+      "Des lissages sur mesure dans notre salon à Aulnay-sous-Bois, adaptés à chaque nature de cheveu. Un diagnostic personnalisé pour un résultat naturel et durable.",
     href: "#lissage",
     cta: "En savoir plus",
     roman: "II",
@@ -31,7 +31,7 @@ const activites = [
 
 export default function Activites() {
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="py-20 md:py-32 bg-white">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -43,9 +43,12 @@ export default function Activites() {
           <p className="text-[var(--color-bordeaux)] text-[11px] font-medium tracking-[0.3em] uppercase mb-5">
             Trois expertises
           </p>
-          <h2 className="font-serif text-3xl md:text-5xl font-light text-[var(--color-black)] leading-[1.05]">
+          <h2 className="font-serif text-3xl md:text-5xl font-light text-[var(--color-black)] leading-[1.05] mb-5">
             Un savoir-faire, trois métiers
           </h2>
+          <p className="text-[var(--color-gray-500)] text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+            Du développement de notre formule exclusive à la formation de professionnels, chaque pilier incarne notre exigence.
+          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-6">
@@ -61,7 +64,7 @@ export default function Activites() {
                 delay: i * 0.15,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="group relative bg-[var(--color-gray-100)] p-8 md:p-10 hover:bg-[var(--color-black)] transition-colors duration-500 flex flex-col"
+              className="group relative bg-[var(--color-gray-100)] p-8 md:p-12 hover:bg-[var(--color-black)] transition-colors duration-500 flex flex-col"
             >
               <span className="font-serif text-4xl text-[var(--color-gray-300)] group-hover:text-white/20 transition-colors duration-500 mb-6">
                 {activite.roman}
