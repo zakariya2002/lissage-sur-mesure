@@ -107,6 +107,21 @@ export default function Produit() {
           </div>
         </div>
 
+        {/* ── Message achat ── */}
+        <div className="bg-[var(--color-bordeaux)] text-white text-center py-5 px-6">
+          <p className="text-sm md:text-base font-medium leading-relaxed">
+            Achetez nos produits en point de vente — pour plus d&apos;informations,{" "}
+            <a
+              href="https://wa.me/33612287511"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:opacity-80 transition-opacity"
+            >
+              contactez-nous sur WhatsApp
+            </a>
+          </p>
+        </div>
+
         {/* ── Point de vente ── */}
         <div className="border border-[var(--color-gray-200)] bg-[var(--color-gray-100)]">
           <div className="grid lg:grid-cols-2">
