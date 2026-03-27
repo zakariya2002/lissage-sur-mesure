@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -201,10 +201,12 @@ function ActifPhareCard({ actif }: { actif: typeof actifSilver }) {
 export default function Produit() {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(0);
+  const carouselRef = useRef<HTMLDivElement>(null);
 
   const goTo = (index: number) => {
     setDirection(index > current ? 1 : -1);
     setCurrent(index);
+    carouselRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   const goPrev = () => {
@@ -241,7 +243,7 @@ export default function Produit() {
         </div>
 
         {/* ── Carousel wrapper ── */}
-        <div className="relative mb-20">
+        <div ref={carouselRef} className="relative mb-20 scroll-mt-24">
           {/* Fl\u00e8ches de navigation */}
           <button
             onClick={goPrev}
