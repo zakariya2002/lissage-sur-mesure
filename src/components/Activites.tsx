@@ -4,12 +4,11 @@ import { motion } from "framer-motion";
 
 const activites = [
   {
-    titre: "Le Produit",
+    titre: "Nos Produits",
     description:
       "Une formule unique, pensée pour lisser sans fragiliser. Des actifs naturels sélectionnés avec exigence.",
     href: "#formule",
     cta: "Découvrir la formule",
-    roman: "I",
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714a2.25 2.25 0 00.659 1.591L19 14.5M14.25 3.104c.251.023.501.05.75.082M19 14.5l-1.43 4.294a2.25 2.25 0 01-2.134 1.544H8.564a2.25 2.25 0 01-2.134-1.544L5 14.5m14 0H5" />
@@ -17,12 +16,11 @@ const activites = [
     ),
   },
   {
-    titre: "Le Lissage",
+    titre: "Nos Lissages",
     description:
       "Des lissages sur mesure dans notre salon à Aulnay-sous-Bois, adaptés à chaque nature de cheveu. Un diagnostic personnalisé pour un résultat naturel et durable.",
     href: "#lissage",
     cta: "En savoir plus",
-    roman: "II",
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
@@ -30,12 +28,11 @@ const activites = [
     ),
   },
   {
-    titre: "La Formation",
+    titre: "Notre Formation",
     description:
       "Apprenez la méthode Lissage sur Mesure. Formation certifiante, éligible CPF, pour professionnels et particuliers.",
     href: "#formation",
     cta: "Voir la formation",
-    roman: "III",
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 00-.491 6.347A48.62 48.62 0 0112 20.904a48.62 48.62 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.636 50.636 0 00-2.658-.813A59.906 59.906 0 0112 3.493a59.903 59.903 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15v-3.75m0 0h-.008v.008H6.75V11.25z" />
@@ -69,7 +66,7 @@ export default function Activites() {
         <div className="grid md:grid-cols-3 gap-6">
           {activites.map((activite, i) => (
             <motion.a
-              key={activite.roman}
+              key={activite.titre}
               href={activite.href}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -79,16 +76,11 @@ export default function Activites() {
                 delay: i * 0.15,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="group relative bg-[var(--color-gray-100)] border-t-[3px] border-t-[var(--color-bordeaux)] p-8 md:p-12 hover:bg-[var(--color-black)] transition-colors duration-500 flex flex-col"
+              className="group relative bg-[var(--color-gray-100)] p-8 md:p-12 hover:bg-[var(--color-bordeaux)] transition-colors duration-500 flex flex-col"
             >
               {/* Icône */}
-              <span className="text-[var(--color-bordeaux)] group-hover:text-white/40 transition-colors duration-500 mb-5">
+              <span className="text-[var(--color-bordeaux)] group-hover:text-white transition-colors duration-500 mb-5">
                 {activite.icon}
-              </span>
-
-              {/* Numéro roman */}
-              <span className="font-serif text-5xl text-[#5B1E3033] group-hover:text-white/10 transition-colors duration-500 mb-4">
-                {activite.roman}
               </span>
 
               <h3 className="font-serif text-2xl font-bold text-[var(--color-bordeaux)] group-hover:text-white transition-colors duration-500 mb-4">
