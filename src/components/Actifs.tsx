@@ -131,8 +131,8 @@ export default function Actifs() {
                   zIndex: 1,
                   width: "100%",
                   height: "100%",
-                  background: "#4a1526",
-                  border: "1px solid #6b2840",
+                  background: "var(--color-gray-800)",
+                  border: "1px solid var(--color-gray-700)",
                   borderRadius: "1rem",
                 }}
               />
@@ -141,8 +141,8 @@ export default function Actifs() {
                   position: "relative",
                   zIndex: 2,
                   padding: "2.5rem",
-                  background: "var(--color-bordeaux)",
-                  border: "1px solid #6b2840",
+                  background: "var(--color-black)",
+                  border: "1px solid var(--color-gray-700)",
                   borderRadius: "1rem",
                   color: "white",
                   minHeight: "260px",
