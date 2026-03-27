@@ -4,7 +4,9 @@ import SmoothScroll from "@/components/SmoothScroll";
 import CookieBanner from "@/components/CookieBanner";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import Activites from "@/components/Activites";
 import Formule from "@/components/Formule";
+import Lissage from "@/components/Lissage";
 import Produit from "@/components/Produit";
 import Actifs from "@/components/Actifs";
 import ExpertiseBlonds from "@/components/ExpertiseBlonds";
@@ -20,9 +22,11 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <Activites />
         <Formule />
         <Produit />
         <Actifs />
+        <Lissage />
         <ExpertiseBlonds />
         <Formation />
         <Vision />
