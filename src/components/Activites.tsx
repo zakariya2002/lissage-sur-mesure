@@ -69,7 +69,7 @@ export default function Activites() {
               <span className="font-serif text-4xl text-[var(--color-gray-300)] group-hover:text-white/20 transition-colors duration-500 mb-6">
                 {activite.roman}
               </span>
-              <h3 className="font-serif text-2xl text-[var(--color-black)] group-hover:text-white transition-colors duration-500 mb-4">
+              <h3 className="font-serif text-2xl font-bold text-[var(--color-bordeaux)] group-hover:text-white transition-colors duration-500 mb-4">
                 {activite.titre}
               </h3>
               <p className="text-[var(--color-gray-500)] group-hover:text-white/70 text-sm leading-relaxed transition-colors duration-500 mb-8 flex-1">
