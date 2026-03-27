@@ -42,8 +42,12 @@ export default function Produit() {
           <h2 className="font-serif text-3xl md:text-5xl lg:text-6xl font-light text-[var(--color-black)] mb-5 leading-[1.05]">
             Lissage sur <span className="text-[#8B1A3A]">Mesure</span>
           </h2>
-          <p className="text-[var(--color-gray-500)] max-w-lg mx-auto text-base leading-relaxed">
-            Une formule pensée, pas copiée. Un protocole respectueux de chaque fibre capillaire.
+          <p className="text-[var(--color-gray-500)] max-w-2xl mx-auto text-base leading-relaxed mb-6">
+            Chaque lissage est réalisé en fonction d&apos;un diagnostic capillaire précis et du résultat attendu.
+            Nous adaptons le protocole à votre type de cheveu et au rendu souhaité.
+          </p>
+          <p className="text-[var(--color-bordeaux)] text-sm font-medium max-w-lg mx-auto leading-relaxed italic">
+            Diagnostic réalisé par une experte du lissage — plus de 10 ans d&apos;expérience.
           </p>
         </div>
 
