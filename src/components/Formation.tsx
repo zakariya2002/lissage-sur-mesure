@@ -50,22 +50,6 @@ export default function Formation() {
               </div>
             </div>
 
-            {/* Rendement */}
-            <div className="bg-[var(--color-bordeaux)] text-white p-8 md:p-10 text-center">
-              <p className="text-[11px] font-medium tracking-[0.3em] uppercase mb-4 text-white/60">
-                Rendement
-              </p>
-              <p className="font-serif text-4xl md:text-5xl font-bold mb-3">
-                x9
-              </p>
-              <p className="text-sm md:text-base leading-relaxed max-w-md mx-auto mb-2">
-                Avec un seul pack de produits de lissage acheté, multipliez votre investissement par 9.
-              </p>
-              <p className="text-xs text-white/70 leading-relaxed max-w-md mx-auto">
-                Rendement x9 dès le premier achat — amorti dès le premier lissage après la formation Lissage sur Mesure.
-              </p>
-            </div>
-
             <div className="block">
               <a
                 href="#rendez-vous"
@@ -74,6 +58,53 @@ export default function Formation() {
                 <span className="cta-bg bg-[var(--color-gray-800)]" />
                 <span className="cta-text">Se renseigner sur la formation</span>
               </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Rendement */}
+        <div className="bg-[var(--color-bordeaux)] text-white p-10 md:p-16 mt-12">
+          <div className="max-w-3xl mx-auto">
+            <div className="grid md:grid-cols-[auto_1fr] gap-8 md:gap-12 items-center">
+              <div className="text-center md:text-left">
+                <p className="font-serif text-7xl md:text-8xl font-bold leading-none">
+                  x9
+                </p>
+              </div>
+              <div>
+                <h3 className="font-serif text-2xl md:text-3xl font-light mb-4 leading-tight">
+                  Un seul pack, neuf fois votre investissement
+                </h3>
+                <p className="text-white/80 text-sm md:text-base leading-relaxed mb-6">
+                  Après la formation Lissage sur Mesure, chaque pack de produits acheté vous permet de réaliser
+                  plusieurs lissages clients. Résultat : un rendement multiplié par 9 dès le premier achat,
+                  amorti dès votre premier lissage.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <div className="flex items-center gap-3">
+                    <span className="w-8 h-8 border border-white/30 flex items-center justify-center text-xs">1</span>
+                    <span className="text-sm text-white/90">Pack acheté</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-white/40">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="w-8 h-8 border border-white/30 flex items-center justify-center text-xs">9x</span>
+                    <span className="text-sm text-white/90">Retour sur investissement</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-white/40">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="w-8 h-8 bg-white/10 flex items-center justify-center text-xs">&#10003;</span>
+                    <span className="text-sm text-white/90">Amorti au 1er lissage</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
