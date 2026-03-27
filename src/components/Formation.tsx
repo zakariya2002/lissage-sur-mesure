@@ -32,6 +32,7 @@ export default function Formation() {
                 <p className="font-serif text-3xl md:text-4xl font-light text-[var(--color-black)] leading-none">
                   1&nbsp;500&nbsp;<span className="text-xl">€</span>&nbsp;<span className="text-base text-[var(--color-gray-400)] font-sans">TTC</span>
                 </p>
+                <p className="text-[11px] text-[var(--color-gray-400)] mt-1">soit 1&nbsp;200&nbsp;€ HT</p>
                 <p className="text-[10px] text-[var(--color-gray-400)] mt-1.5">Financement CPF &amp; OPCO possible</p>
               </div>
             </div>
@@ -193,7 +194,7 @@ export default function Formation() {
               Prêt(e) à maîtriser le lissage sur mesure ?
             </h3>
             <p className="text-[var(--color-gray-500)] mb-3 max-w-md mx-auto text-sm leading-relaxed">
-              Formation à <strong className="text-[var(--color-black)]">1&nbsp;500&nbsp;€ TTC</strong> — finançable via CPF ou OPCO.
+              Formation à <strong className="text-[var(--color-black)]">1&nbsp;500&nbsp;€ TTC</strong> <span className="text-[var(--color-gray-400)] font-normal">(1&nbsp;200&nbsp;€ HT)</span> — finançable via CPF ou OPCO.
               Réservez un appel de 15 minutes pour discuter de votre projet,
               vos objectifs et les options de financement.
             </p>

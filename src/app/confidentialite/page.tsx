@@ -79,51 +79,32 @@ export default function Confidentialite() {
             <h2 className="font-serif text-xl text-[var(--color-black)] mb-4">
               3. Finalités et bases légales des traitements
             </h2>
-            <div className="overflow-x-auto">
-              <table className="w-full text-xs border border-[var(--color-gray-200)]">
-                <thead>
-                  <tr className="bg-[var(--color-gray-100)]">
-                    <th className="p-3 text-left border-b border-[var(--color-gray-200)]">Finalité</th>
-                    <th className="p-3 text-left border-b border-[var(--color-gray-200)]">Base légale</th>
-                    <th className="p-3 text-left border-b border-[var(--color-gray-200)]">Durée de conservation</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="p-3 border-b border-[var(--color-gray-200)]">
-                      Traitement de votre demande de rappel téléphonique
-                    </td>
-                    <td className="p-3 border-b border-[var(--color-gray-200)]">
-                      Consentement (art. 6.1.a RGPD)
-                    </td>
-                    <td className="p-3 border-b border-[var(--color-gray-200)]">
-                      12 mois à compter de la collecte, ou jusqu&apos;à retrait du consentement
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="p-3 border-b border-[var(--color-gray-200)]">
-                      Gestion de la relation commerciale (prospect / formation)
-                    </td>
-                    <td className="p-3 border-b border-[var(--color-gray-200)]">
-                      Exécution de mesures précontractuelles (art. 6.1.b RGPD)
-                    </td>
-                    <td className="p-3 border-b border-[var(--color-gray-200)]">
-                      3 ans après le dernier contact
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="p-3 border-b border-[var(--color-gray-200)]">
-                      Gestion administrative et comptable (si inscription à la formation)
-                    </td>
-                    <td className="p-3 border-b border-[var(--color-gray-200)]">
-                      Obligation légale (art. 6.1.c RGPD)
-                    </td>
-                    <td className="p-3 border-b border-[var(--color-gray-200)]">
-                      10 ans (obligations comptables)
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+            <div className="space-y-4 mt-3">
+              {[
+                {
+                  finalite: "Traitement de votre demande de rappel téléphonique",
+                  base: "Consentement (art. 6.1.a RGPD)",
+                  duree: "12 mois à compter de la collecte, ou jusqu'au retrait du consentement",
+                },
+                {
+                  finalite: "Gestion de la relation commerciale (prospect / formation)",
+                  base: "Exécution de mesures précontractuelles (art. 6.1.b RGPD)",
+                  duree: "3 ans après le dernier contact",
+                },
+                {
+                  finalite: "Gestion administrative et comptable (si inscription à la formation)",
+                  base: "Obligation légale (art. 6.1.c RGPD)",
+                  duree: "10 ans (obligations comptables)",
+                },
+              ].map((item, i) => (
+                <div key={i} className="border border-[var(--color-gray-200)] p-4">
+                  <p className="text-[var(--color-black)] font-medium text-sm mb-2">{item.finalite}</p>
+                  <div className="flex flex-col sm:flex-row sm:gap-6 gap-1 text-xs text-[var(--color-gray-500)]">
+                    <span><strong className="text-[var(--color-gray-600)]">Base légale :</strong> {item.base}</span>
+                    <span><strong className="text-[var(--color-gray-600)]">Durée :</strong> {item.duree}</span>
+                  </div>
+                </div>
+              ))}
             </div>
           </section>
 
@@ -248,26 +229,13 @@ export default function Confidentialite() {
             <h3 className="font-semibold text-[var(--color-black)] mt-6 mb-2">
               Cookies utilisés sur ce site
             </h3>
-            <div className="overflow-x-auto mt-3">
-              <table className="w-full text-xs border border-[var(--color-gray-200)]">
-                <thead>
-                  <tr className="bg-[var(--color-gray-100)]">
-                    <th className="p-3 text-left border-b border-[var(--color-gray-200)]">Nom</th>
-                    <th className="p-3 text-left border-b border-[var(--color-gray-200)]">Type</th>
-                    <th className="p-3 text-left border-b border-[var(--color-gray-200)]">Finalité</th>
-                    <th className="p-3 text-left border-b border-[var(--color-gray-200)]">Durée</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="p-3 border-b border-[var(--color-gray-200)]">lsm_cookie_consent</td>
-                    <td className="p-3 border-b border-[var(--color-gray-200)]">Strictement nécessaire</td>
-                    <td className="p-3 border-b border-[var(--color-gray-200)]">Mémoriser votre choix en matière de cookies</td>
-                    <td className="p-3 border-b border-[var(--color-gray-200)]">13 mois</td>
-                  </tr>
-                  {/* Ajouter ici si vous ajoutez Google Analytics, Meta Pixel, etc. */}
-                </tbody>
-              </table>
+            <div className="mt-3 border border-[var(--color-gray-200)] p-4">
+              <p className="text-[var(--color-black)] font-mono text-xs mb-2">lsm_cookie_consent</p>
+              <div className="flex flex-col sm:flex-row sm:gap-6 gap-1 text-xs text-[var(--color-gray-500)]">
+                <span><strong className="text-[var(--color-gray-600)]">Type :</strong> Strictement nécessaire</span>
+                <span><strong className="text-[var(--color-gray-600)]">Finalité :</strong> Mémoriser votre choix en matière de cookies</span>
+                <span><strong className="text-[var(--color-gray-600)]">Durée :</strong> 13 mois</span>
+              </div>
             </div>
 
             <h3 className="font-semibold text-[var(--color-black)] mt-6 mb-2">
