@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -202,30 +202,18 @@ export default function Produit() {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(0);
 
-  const goTo = useCallback((index: number) => {
-    setCurrent((prev) => {
-      setDirection(index > prev ? 1 : -1);
-      return index;
-    });
-  }, []);
+  const goTo = (index: number) => {
+    setDirection(index > current ? 1 : -1);
+    setCurrent(index);
+  };
 
   const goPrev = () => {
     if (current > 0) goTo(current - 1);
   };
 
-  const goNext = useCallback(() => {
-    setCurrent((prev) => {
-      const next = (prev + 1) % packs.length;
-      setDirection(1);
-      return next;
-    });
-  }, []);
-
-  /* Auto-scroll toutes les 10 secondes */
-  useEffect(() => {
-    const timer = setInterval(goNext, 10000);
-    return () => clearInterval(timer);
-  }, [goNext]);
+  const goNext = () => {
+    if (current < packs.length - 1) goTo(current + 1);
+  };
 
   const pack = packs[current];
 
@@ -258,23 +246,19 @@ export default function Produit() {
           <button
             onClick={goPrev}
             disabled={current === 0}
-            aria-label="Produit pr\u00e9c\u00e9dent"
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-8 z-10 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center border border-[var(--color-gray-200)] bg-white text-[var(--color-black)] hover:bg-[var(--color-gray-100)] transition-colors disabled:opacity-20 disabled:cursor-not-allowed"
+            aria-label="Produit précédent"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-6 z-10 text-[var(--color-gray-400)] hover:text-[var(--color-black)] transition-colors disabled:opacity-20 disabled:cursor-not-allowed"
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 19l-7-7 7-7" />
-            </svg>
+            <span className="text-3xl md:text-4xl font-light select-none">&lsaquo;</span>
           </button>
 
           <button
             onClick={goNext}
             disabled={current === packs.length - 1}
             aria-label="Produit suivant"
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-8 z-10 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center border border-[var(--color-gray-200)] bg-white text-[var(--color-black)] hover:bg-[var(--color-gray-100)] transition-colors disabled:opacity-20 disabled:cursor-not-allowed"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-6 z-10 text-[var(--color-gray-400)] hover:text-[var(--color-black)] transition-colors disabled:opacity-20 disabled:cursor-not-allowed"
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
-            </svg>
+            <span className="text-3xl md:text-4xl font-light select-none">&rsaquo;</span>
           </button>
 
           {/* Slide anim\u00e9 */}
