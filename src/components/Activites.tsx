@@ -76,7 +76,7 @@ export default function Activites() {
                 delay: i * 0.15,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="group relative bg-[var(--color-gray-100)] p-8 md:p-12 hover:bg-[var(--color-bordeaux)] transition-colors duration-500 flex flex-col"
+              className="group relative bg-[var(--color-gray-100)] p-8 md:p-12 [@media(hover:hover)]:hover:bg-[var(--color-bordeaux)] transition-colors duration-500 flex flex-col"
             >
               {/* Icône */}
               <span className="text-[var(--color-bordeaux)] group-hover:text-white transition-colors duration-500 mb-5">

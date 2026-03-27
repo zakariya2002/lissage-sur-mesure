@@ -30,7 +30,7 @@ export default function Vision() {
           style={{ opacity: quoteOpacity, scale: quoteScale }}
           className="mb-24"
         >
-          <div className="relative bg-[var(--color-black)] py-20 md:py-28 px-8 flex items-center justify-center">
+          <div className="relative bg-[var(--color-bordeaux)] py-20 md:py-28 px-8 flex items-center justify-center">
             <div className="text-center max-w-3xl mx-auto">
               <AnimatedLine className="w-12 h-px bg-white/20 mx-auto mb-8" />
               <p className="font-serif text-2xl md:text-4xl lg:text-5xl font-light text-white leading-[1.2] italic">
