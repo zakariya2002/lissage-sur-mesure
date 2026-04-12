@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const modules = [
   { title: "Diagnostic capillaire personnalisé", description: "Apprendre à réaliser un diagnostic capillaire complet : porosité, élasticité, historique chimique et attentes de la cliente. La base de toute prestation sur mesure." },
   { title: "Protocole Lissage sur Mesure", description: "Formuler un lissage adapté à chaque profil capillaire. Dosages, temps de pose, techniques d'application — tout est ajusté selon le diagnostic et le résultat souhaité." },
@@ -33,27 +31,13 @@ export default function Formation() {
                   1&nbsp;500&nbsp;<span className="text-xl">€</span>&nbsp;<span className="text-base text-[var(--color-gray-400)] font-sans">TTC</span>
                 </p>
                 <p className="text-[11px] text-[var(--color-gray-400)] mt-1">soit 1&nbsp;250&nbsp;€ HT</p>
-                <p className="text-[10px] text-[var(--color-gray-400)] mt-1.5">Financement CPF &amp; OPCO possible</p>
+                <p className="text-[10px] text-[var(--color-gray-400)] mt-1.5">Financement OPCO possible</p>
               </div>
             </div>
 
-            {/* Badges CPF + OPCO — mis en avant */}
-            <div className="grid sm:grid-cols-2 gap-4 max-w-lg mx-auto mb-10">
-              <div className="bg-white border border-[var(--color-gray-200)] p-6 text-center">
-                <Image
-                  src="/images/cpf-badge.png"
-                  alt="CPF — Compte Personnel de Formation"
-                  width={120}
-                  height={120}
-                  className="w-16 h-16 object-contain mx-auto mb-3"
-                  sizes="64px"
-                />
-                <p className="text-[var(--color-black)] font-semibold text-sm mb-1">Éligible CPF</p>
-                <p className="text-[var(--color-gray-500)] text-xs leading-relaxed">
-                  Financement via Mon Compte Formation
-                </p>
-              </div>
-              <div className="bg-white border border-[var(--color-gray-200)] p-6 text-center">
+            {/* Badge OPCO */}
+            <div className="flex justify-center mb-10">
+              <div className="bg-white border border-[var(--color-gray-200)] p-6 text-center max-w-[220px]">
                 <div className="w-16 h-16 mx-auto mb-3 bg-[var(--color-black)] flex items-center justify-center rounded">
                   <span className="text-white font-bold text-[11px] tracking-wider">OPCO</span>
                 </div>
@@ -184,6 +168,29 @@ export default function Formation() {
           </div>
         </div>
 
+        {/* Indicateurs de résultats */}
+        <div className="mt-16">
+          <p className="text-center text-[var(--color-gray-400)] text-[11px] tracking-[0.3em] uppercase mb-8">
+            Indicateurs de résultats
+          </p>
+          <div className="border border-[var(--color-gray-200)] bg-white p-8 md:p-12">
+            <div className="grid grid-cols-2 gap-y-8">
+              <div className="text-center border-r border-[var(--color-gray-200)]">
+                <p className="font-serif text-2xl md:text-3xl font-semibold text-[var(--color-black)] mb-1">100%</p>
+                <p className="text-sm text-[var(--color-gray-500)]">Satisfaction</p>
+              </div>
+              <div className="text-center">
+                <p className="font-serif text-2xl md:text-3xl font-semibold text-[var(--color-black)] mb-1">100%</p>
+                <p className="text-sm text-[var(--color-gray-500)]">Assiduité</p>
+              </div>
+              <div className="text-center col-span-2">
+                <p className="font-serif text-2xl md:text-3xl font-semibold text-[var(--color-black)] mb-1">100%</p>
+                <p className="text-sm text-[var(--color-gray-500)]">Réussite</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* CTA Formation */}
         <div className="mt-16">
           <div className="border border-[var(--color-gray-200)] bg-white p-12 md:p-16 text-center">
@@ -194,7 +201,7 @@ export default function Formation() {
               Prêt(e) à maîtriser le lissage sur mesure ?
             </h3>
             <p className="text-[var(--color-gray-500)] mb-3 max-w-md mx-auto text-sm leading-relaxed">
-              Formation à <strong className="text-[var(--color-black)]">1&nbsp;500&nbsp;€ TTC</strong> <span className="text-[var(--color-gray-400)] font-normal">(1&nbsp;250&nbsp;€ HT)</span> — finançable via CPF ou OPCO.
+              Formation à <strong className="text-[var(--color-black)]">1&nbsp;500&nbsp;€ TTC</strong> <span className="text-[var(--color-gray-400)] font-normal">(1&nbsp;250&nbsp;€ HT)</span> — finançable via OPCO.
               Réservez un appel de 15 minutes pour discuter de votre projet,
               vos objectifs et les options de financement.
             </p>
