@@ -69,7 +69,7 @@ export default function Hero() {
             transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
             className="mb-10"
           >
-            <h1 className="sr-only">Lissage sur Mesure — Salon de lissage professionnel et formation CPF à Aulnay-sous-Bois</h1>
+            <h1 className="sr-only">Lissage sur Mesure — Lissage professionnel, formation et vente de produits à Aulnay-sous-Bois</h1>
             <Image
               src="/images/logo-white.png"
               alt="Lissage sur Mesure — Salon de lissage professionnel à Aulnay-sous-Bois"
@@ -106,7 +106,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 1.3 }}
             className="text-[11px] text-white/40 font-medium mb-14 tracking-[0.3em] uppercase"
           >
-            Formation professionnelle &middot; Compatible CPF
+            Formation professionnelle &middot; Lissage &middot; Vente de produits
           </motion.p>
 
           {/* CTA — hover fill inspiré Salt Yard */}
