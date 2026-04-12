@@ -60,6 +60,29 @@ export default function Formation() {
           </div>
         </div>
 
+        {/* Indicateurs de résultats */}
+        <div className="mb-14">
+          <p className="text-center text-[var(--color-gray-400)] text-[11px] tracking-[0.3em] uppercase mb-8">
+            Indicateurs de résultats
+          </p>
+          <div className="border border-[var(--color-gray-200)] bg-white p-8 md:p-12">
+            <div className="grid grid-cols-2 gap-y-8">
+              <div className="text-center border-r border-[var(--color-gray-200)]">
+                <p className="font-serif text-2xl md:text-3xl font-semibold text-[var(--color-black)] mb-1">100%</p>
+                <p className="text-sm text-[var(--color-gray-500)]">Satisfaction</p>
+              </div>
+              <div className="text-center">
+                <p className="font-serif text-2xl md:text-3xl font-semibold text-[var(--color-black)] mb-1">100%</p>
+                <p className="text-sm text-[var(--color-gray-500)]">Assiduité</p>
+              </div>
+              <div className="text-center col-span-2">
+                <p className="font-serif text-2xl md:text-3xl font-semibold text-[var(--color-black)] mb-1">100%</p>
+                <p className="text-sm text-[var(--color-gray-500)]">Réussite</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Formatrice */}
         <div className="border border-[var(--color-gray-200)] bg-white p-8 md:p-10">
           <div>
@@ -164,29 +187,6 @@ export default function Formation() {
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Indicateurs de résultats */}
-        <div className="mt-16">
-          <p className="text-center text-[var(--color-gray-400)] text-[11px] tracking-[0.3em] uppercase mb-8">
-            Indicateurs de résultats
-          </p>
-          <div className="border border-[var(--color-gray-200)] bg-white p-8 md:p-12">
-            <div className="grid grid-cols-2 gap-y-8">
-              <div className="text-center border-r border-[var(--color-gray-200)]">
-                <p className="font-serif text-2xl md:text-3xl font-semibold text-[var(--color-black)] mb-1">100%</p>
-                <p className="text-sm text-[var(--color-gray-500)]">Satisfaction</p>
-              </div>
-              <div className="text-center">
-                <p className="font-serif text-2xl md:text-3xl font-semibold text-[var(--color-black)] mb-1">100%</p>
-                <p className="text-sm text-[var(--color-gray-500)]">Assiduité</p>
-              </div>
-              <div className="text-center col-span-2">
-                <p className="font-serif text-2xl md:text-3xl font-semibold text-[var(--color-black)] mb-1">100%</p>
-                <p className="text-sm text-[var(--color-gray-500)]">Réussite</p>
-              </div>
             </div>
           </div>
         </div>
