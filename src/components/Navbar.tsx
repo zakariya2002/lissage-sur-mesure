@@ -39,11 +39,13 @@ export default function Navbar() {
           {/* Logo image */}
           <a href="/" className="block">
             <Image
-              src={scrolled ? "/images/logo-dark.png" : "/images/logo-white.png"}
+              src="/images/logo-dark.png"
               alt="Lissage sur Mesure"
               width={180}
               height={50}
-              className="h-14 md:h-16 w-auto object-contain transition-all duration-300"
+              className={`h-14 md:h-16 w-auto object-contain transition-all duration-300 ${
+                scrolled ? "" : "brightness-0 invert"
+              }`}
               sizes="auto"
               priority
             />
