@@ -71,13 +71,12 @@ export default function Formule() {
           <motion.div style={{ y: imageY }}>
             <ScrollReveal direction="right" delay={0.3}>
               <div className="relative group">
-                <div className="overflow-hidden img-zoom">
+                <div className="overflow-hidden img-zoom relative aspect-[4/5]">
                   <Image
                     src="/images/woman-smiling.jpg"
                     alt="Résultat lissage sur mesure — cheveux lisses et brillants"
-                    width={1024}
-                    height={1024}
-                    className="w-full h-auto object-cover"
+                    fill
+                    className="object-cover object-top"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
