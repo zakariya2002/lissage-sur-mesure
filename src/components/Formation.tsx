@@ -109,7 +109,7 @@ export default function Formation() {
                   Un seul pack, cinq fois votre investissement
                 </h3>
                 <p className="text-white/80 text-sm md:text-base leading-relaxed mb-6">
-                  Chaque pack à 183,33&nbsp;€ HT comprend le produit de lissage + un shampoing
+                  Chaque pack à 183,33&nbsp;€ comprend le produit de lissage + un shampoing
                   clarifiant, et permet de réaliser jusqu&apos;à 10 lissages clients.
                   À ~120&nbsp;€ le lissage, c&apos;est 1&nbsp;200&nbsp;€ de chiffre d&apos;affaires
                   généré — soit un rendement multiplié par 5.
