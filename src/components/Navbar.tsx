@@ -5,12 +5,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 const navLinks = [
-  { label: "La Formule", href: "/#formule" },
-  { label: "Le Produit", href: "/#produit" },
-  { label: "Les Actifs", href: "/#actifs" },
-  { label: "Boutique", href: "/boutique" },
-  { label: "Formation", href: "/#formation" },
-  { label: "Contact", href: "/#rendez-vous" },
+  { label: "La Formule", href: "#formule" },
+  { label: "Le Produit", href: "#produit" },
+  { label: "Les Actifs", href: "#actifs" },
+  { label: "Expertise Blonds", href: "#expertise-blonds" },
+  { label: "Formation", href: "#formation" },
+  { label: "Contact", href: "#rendez-vous" },
 ];
 
 export default function Navbar() {
