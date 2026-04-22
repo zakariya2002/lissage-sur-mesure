@@ -76,7 +76,7 @@ export default function Formule() {
                     src="/images/woman-smiling.jpg"
                     alt="Résultat lissage sur mesure — cheveux lisses et brillants"
                     fill
-                    className="object-cover object-top"
+                    className="object-cover object-[center_35%]"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
