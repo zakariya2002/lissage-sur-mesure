@@ -30,7 +30,7 @@ export default function Lissage() {
             <div className="relative">
               <div className="overflow-hidden img-zoom">
                 <Image
-                  src="/images/woman-corporate.jpg"
+                  src="/images/woman-lissage.jpg"
                   alt="Service de lissage professionnel"
                   width={800}
                   height={1000}

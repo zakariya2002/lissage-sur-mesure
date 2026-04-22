@@ -27,10 +27,9 @@ export default function Formation() {
             <div className="mb-10">
               <div className="inline-block border border-[var(--color-gray-200)] bg-white px-8 py-5">
                 <p className="text-[10px] text-[var(--color-gray-400)] tracking-[0.25em] uppercase mb-1">Tarif formation</p>
-                <p className="font-serif text-3xl md:text-4xl font-light text-[var(--color-black)] leading-none">
-                  1&nbsp;500&nbsp;<span className="text-xl">€</span>&nbsp;<span className="text-base text-[var(--color-gray-400)] font-sans">TTC</span>
+                <p className="font-serif text-2xl md:text-3xl font-light text-[var(--color-black)] leading-none">
+                  Sur demande
                 </p>
-                <p className="text-[11px] text-[var(--color-gray-400)] mt-1">soit 1&nbsp;250&nbsp;€ HT</p>
                 <p className="text-[10px] text-[var(--color-gray-400)] mt-1.5">Financement OPCO possible</p>
               </div>
             </div>
@@ -201,9 +200,8 @@ export default function Formation() {
               Prêt(e) à maîtriser le lissage sur mesure ?
             </h3>
             <p className="text-[var(--color-gray-500)] mb-3 max-w-md mx-auto text-sm leading-relaxed">
-              Formation à <strong className="text-[var(--color-black)]">1&nbsp;500&nbsp;€ TTC</strong> <span className="text-[var(--color-gray-400)] font-normal">(1&nbsp;250&nbsp;€ HT)</span> — finançable via OPCO.
-              Réservez un appel de 15 minutes pour discuter de votre projet,
-              vos objectifs et les options de financement.
+              Formation finançable via OPCO. Réservez un appel de 15 minutes
+              pour discuter de votre projet, vos objectifs et les options de financement.
             </p>
             <p className="text-[var(--color-gray-400)] mb-8 max-w-sm mx-auto text-xs leading-relaxed">
               Diagnostic capillaire, protocole personnalisé, expertise cheveux sensibilisés — formez-vous auprès d&apos;une experte avec 10 ans d&apos;expérience.
