@@ -109,14 +109,14 @@ export default function Formation() {
                   Un seul pack, cinq fois votre investissement
                 </h3>
                 <p className="text-white/80 text-sm md:text-base leading-relaxed mb-6">
-                  Chaque pack à 220&nbsp;€ TTC comprend le produit de lissage + un shampoing
+                  Chaque pack à 183,33&nbsp;€ HT comprend le produit de lissage + un shampoing
                   clarifiant, et permet de réaliser jusqu&apos;à 10 lissages clients.
                   À ~120&nbsp;€ le lissage, c&apos;est 1&nbsp;200&nbsp;€ de chiffre d&apos;affaires
                   généré — soit un rendement multiplié par 5.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <div className="flex items-center gap-3">
-                    <span className="min-w-10 h-8 px-2 border border-white/30 flex items-center justify-center text-[10px]">220€</span>
+                    <span className="min-w-10 h-8 px-2 border border-white/30 flex items-center justify-center text-[10px]">183€</span>
                     <span className="text-sm text-white/90">Pack investi</span>
                   </div>
                   <div className="flex items-center gap-2 text-white/40">

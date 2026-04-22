@@ -100,7 +100,7 @@ const packs: Pack[] = [
     id: "sur-mesure",
     nom: "Lissage Sur Mesure",
     sousTitre: "La r\u00e9f\u00e9rence du lissage personnalis\u00e9",
-    prix: "220 \u20ac TTC",
+    prix: "183,33 \u20ac HT",
     prixHT: "183,33 \u20ac",
     image: "/images/product-shoot-white.png",
     imageAlt: "Produit Lissage sur Mesure",
@@ -121,7 +121,7 @@ const packs: Pack[] = [
     id: "silk",
     nom: "Lissage SILK",
     sousTitre: "Sp\u00e9cial coloration et d\u00e9coloration",
-    prix: "230 \u20ac TTC",
+    prix: "191,67 \u20ac HT",
     prixHT: "191,67 \u20ac",
     image: "/images/product-shoot-white-v2.png",
     imageAlt: "Produit Lissage SILK",
@@ -294,9 +294,6 @@ export default function Produit() {
                     <div className="absolute bottom-4 right-4 bg-[var(--color-black)] text-white px-5 py-2.5 text-center">
                       <span className="text-lg font-semibold tracking-wide block">
                         {pack.prix}
-                      </span>
-                      <span className="text-[10px] text-white/50 block">
-                        soit {pack.prixHT} HT
                       </span>
                     </div>
                   </div>
