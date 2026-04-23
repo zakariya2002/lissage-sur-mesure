@@ -8,7 +8,8 @@ export const metadata: Metadata = {
  * CGV — Conditions Générales de Vente
  * Couvre : vente de produits + prestations de formation.
  * ⚠️ BROUILLON — À faire valider par un avocat avant publication définitive.
- * Remplacer les [PLACEHOLDER] par les informations réelles de l'entreprise.
+ * Placeholders restants à compléter : [CAPITAL SOCIAL],
+ * [N° TVA INTRA], [NOM ET COORDONNÉES DU MÉDIATEUR].
  */
 export default function CGV() {
   return (
@@ -29,19 +30,23 @@ export default function CGV() {
             <h2 className="font-serif text-xl text-[var(--color-black)] mb-4">1. Vendeur</h2>
             <p>
               Les présentes Conditions Générales de Vente (CGV) sont conclues entre
-              <strong> [NOM COMMERCIAL]</strong>, micro-entrepreneur, immatriculée
-              au répertoire SIRENE sous le numéro <strong>[SIRET]</strong>,
-              domiciliée <strong>[ADRESSE]</strong>, ci-après désignée
-              &ldquo;le Vendeur&rdquo; ou &ldquo;Lissage sur Mesure&rdquo;,
+              <strong> LISSAGE SUR MESURE</strong>, SAS au capital de
+              <strong> [CAPITAL SOCIAL]&nbsp;€</strong>, immatriculée au
+              répertoire SIRENE sous le numéro SIRET
+              <strong> 993&nbsp;914&nbsp;415&nbsp;00019</strong>, dont le siège
+              social est situé
+              <strong> 25B avenue Paul Vaillant Couturier, 93150 Le Blanc-Mesnil, France</strong>,
+              ci-après désignée &ldquo;le Vendeur&rdquo; ou &ldquo;Lissage sur Mesure&rdquo;,
               et toute personne physique ou morale procédant à un achat sur le
               site, ci-après &ldquo;le Client&rdquo;.
             </p>
             <p className="mt-3">
-              Email&nbsp;: <strong>[EMAIL CONTACT]</strong> — Téléphone&nbsp;:
-              <strong> [TÉLÉPHONE]</strong>
+              Email&nbsp;: <strong>lissagesurmesureformation@gmail.com</strong> — Téléphone&nbsp;:
+              <strong> +33&nbsp;6&nbsp;12&nbsp;28&nbsp;75&nbsp;11</strong>
             </p>
             <p className="mt-3 text-xs text-[var(--color-gray-500)]">
-              <strong>TVA non applicable, art. 293 B du CGI.</strong>
+              Code APE/NAF&nbsp;: 85.59A — Formation continue d&apos;adultes.
+              N°&nbsp;TVA intracommunautaire&nbsp;: <strong>[N° TVA INTRA]</strong>.
             </p>
           </section>
 
@@ -74,10 +79,12 @@ export default function CGV() {
           <section>
             <h2 className="font-serif text-xl text-[var(--color-black)] mb-4">4. Prix</h2>
             <p>
-              Les prix sont indiqués en euros, toutes taxes comprises. La mention
-              <em> « TVA non applicable, art. 293 B du CGI »</em> figure sur les
-              factures, le Vendeur bénéficiant du régime de la franchise en base
-              de TVA.
+              Les prix sont indiqués en euros, <strong>hors taxes (HT)</strong>,
+              le site s&apos;adressant à une clientèle professionnelle (B2B).
+              La <strong>TVA française au taux en vigueur (20&nbsp;%)</strong> est
+              ajoutée et affichée lors du processus de commande, avant
+              validation finale du paiement. Le montant TTC ainsi que la TVA
+              applicable figurent sur la facture remise au Client.
             </p>
             <p className="mt-3">
               Les frais de livraison sont indiqués séparément lors du processus
@@ -137,7 +144,7 @@ export default function CGV() {
             </p>
             <p className="mt-3">
               La rétractation s&apos;exerce par notification écrite à
-              <strong> [EMAIL CONTACT]</strong>. Les produits doivent être
+              <strong> lissagesurmesureformation@gmail.com</strong>. Les produits doivent être
               retournés dans leur emballage d&apos;origine, non ouverts et en
               parfait état, dans un délai de 14 jours suivant la notification.
               Les frais de retour sont à la charge du Client.
@@ -162,7 +169,7 @@ export default function CGV() {
               (articles L217-3 et suivants du Code de la consommation) et de la
               garantie contre les vices cachés (articles 1641 et suivants du
               Code civil). En cas de défaut, le Client peut contacter
-              <strong> [EMAIL CONTACT]</strong>.
+              <strong> lissagesurmesureformation@gmail.com</strong>.
             </p>
           </section>
 
@@ -220,8 +227,8 @@ export default function CGV() {
             </p>
             <p className="mt-3">
               Conformément à l&apos;article L612-1 du Code de la consommation,
-              le Client peut recourir gratuitement au service de médiation&nbsp;:
-              <strong> [NOM ET COORDONNÉES DU MÉDIATEUR — à compléter]</strong>.
+              le Client consommateur peut recourir gratuitement au service de
+              médiation&nbsp;: <strong>[NOM ET COORDONNÉES DU MÉDIATEUR]</strong>.
             </p>
             <p className="mt-3">
               À défaut de résolution amiable, les tribunaux français seront
@@ -232,10 +239,11 @@ export default function CGV() {
 
         <div className="mt-12 p-6 bg-[var(--color-gray-100)] border-l-2 border-[var(--color-black)]">
           <p className="text-xs text-[var(--color-gray-500)]">
-            <strong>Avertissement&nbsp;:</strong> Ce document est un brouillon.
-            Il doit être validé par un avocat avant publication définitive.
-            Les <strong>[PLACEHOLDER]</strong> doivent être remplacés par les
-            informations réelles de l&apos;entreprise.
+            <strong>Avertissement&nbsp;:</strong> Ce document est un brouillon
+            en attente de validation par un avocat avant publication définitive.
+            Les éléments suivants restent à compléter&nbsp;: capital social de
+            la SAS, email de contact professionnel, numéro de TVA
+            intracommunautaire, et désignation du médiateur de la consommation.
           </p>
         </div>
 

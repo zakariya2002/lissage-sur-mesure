@@ -72,13 +72,13 @@ export default function Vision() {
           {/* Image avec parallax */}
           <motion.div style={{ y: imageY }}>
             <ScrollReveal direction="right" delay={0.3}>
-              <div className="aspect-square overflow-hidden group img-zoom">
+              <div className="aspect-[6/5] overflow-hidden group img-zoom">
                 <Image
-                  src="/images/woman-corporate.jpg"
-                  alt="Experte lissage sur mesure — cheveux blonds lisses"
+                  src="/images/woman-lissage-action.jpg"
+                  alt="Lissage sur mesure — résultat brillant et lisse"
                   width={1024}
-                  height={1024}
-                  className="w-full h-full object-cover"
+                  height={1365}
+                  className="w-full h-full object-cover object-top"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>

@@ -7,8 +7,8 @@ import { motion, AnimatePresence } from "framer-motion";
 /* ── Point de vente ── */
 const POINT_DE_VENTE = {
   nom: "Lissage sur Mesure — Point de vente",
-  telephone: "+33 6 12 28 75 11",
-  telephoneDisplay: "06 12 28 75 11",
+  telephone: "+33 6 09 77 52 87",
+  telephoneDisplay: "06 09 77 52 87",
   adresse: "7 Place de l'Hôtel de Ville, 93600 Aulnay-sous-Bois",
   lat: 48.9326,
   lng: 2.4964,
@@ -100,8 +100,8 @@ const packs: Pack[] = [
     id: "sur-mesure",
     nom: "Lissage Sur Mesure",
     sousTitre: "La r\u00e9f\u00e9rence du lissage personnalis\u00e9",
-    prix: "183,33 \u20ac",
-    prixHT: "183,33 \u20ac",
+    prix: "183,33 \u20ac HT",
+    prixHT: "183,33 \u20ac HT",
     image: "/images/product-shoot-white.png",
     imageAlt: "Produit Lissage sur Mesure",
     contenu: "Produit de lissage Sur Mesure + Shampoing clarifiant — jusqu\u2019\u00e0 10 lissages par pack",
@@ -121,8 +121,8 @@ const packs: Pack[] = [
     id: "silk",
     nom: "Lissage SILK",
     sousTitre: "Sp\u00e9cial coloration et d\u00e9coloration",
-    prix: "191,67 \u20ac",
-    prixHT: "191,67 \u20ac",
+    prix: "191,67 \u20ac HT",
+    prixHT: "191,67 \u20ac HT",
     image: "/images/product-shoot-white-v2.png",
     imageAlt: "Produit Lissage SILK",
     contenu: "Produit de lissage SILK + Shampoing clarifiant — jusqu\u2019\u00e0 10 lissages par pack",
@@ -204,6 +204,8 @@ function ActifPhareCard({ actif }: { actif: typeof actifSilver }) {
 export default function Produit() {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(0);
+  const [loadingId, setLoadingId] = useState<string | null>(null);
+  const [checkoutError, setCheckoutError] = useState<string | null>(null);
   const carouselRef = useRef<HTMLDivElement>(null);
 
   const goTo = (index: number) => {
@@ -219,6 +221,26 @@ export default function Produit() {
   const goNext = () => {
     if (current < packs.length - 1) goTo(current + 1);
   };
+
+  async function handleBuy(productId: string) {
+    setCheckoutError(null);
+    setLoadingId(productId);
+    try {
+      const res = await fetch("/api/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ productId, quantity: 1 }),
+      });
+      const data = await res.json();
+      if (!res.ok || !data.url) {
+        throw new Error(data.error || "Erreur lors de la création du paiement");
+      }
+      window.location.href = data.url;
+    } catch (err) {
+      setCheckoutError(err instanceof Error ? err.message : "Erreur inconnue");
+      setLoadingId(null);
+    }
+  }
 
   const pack = packs[current];
 
@@ -339,7 +361,7 @@ export default function Produit() {
                   <p className="text-[11px] text-[var(--color-bordeaux)] tracking-[0.3em] uppercase mb-4">
                     R&eacute;sultats
                   </p>
-                  <div className="space-y-3">
+                  <div className="space-y-3 mb-8">
                     {pack.resultats.map((r, i) => (
                       <div key={i} className="flex items-center gap-4">
                         <span className="w-6 h-px bg-[var(--color-black)] shrink-0" />
@@ -348,6 +370,33 @@ export default function Produit() {
                         </span>
                       </div>
                     ))}
+                  </div>
+
+                  {/* CTA Acheter */}
+                  <div className="pt-6 border-t border-[var(--color-gray-200)]">
+                    <div className="flex items-baseline justify-between mb-4">
+                      <span className="text-[10px] text-[var(--color-gray-400)] tracking-[0.2em] uppercase">
+                        Prix
+                      </span>
+                      <span className="font-serif text-2xl text-[var(--color-black)]">
+                        {pack.prix}
+                      </span>
+                    </div>
+                    <button
+                      onClick={() => handleBuy(pack.id)}
+                      disabled={loadingId === pack.id}
+                      className="w-full py-4 bg-[var(--color-black)] text-white text-[11px] font-semibold tracking-[0.2em] uppercase hover:bg-[var(--color-bordeaux)] transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+                    >
+                      {loadingId === pack.id ? "Redirection…" : "Acheter en ligne"}
+                    </button>
+                    <p className="text-[11px] text-[var(--color-gray-400)] text-center mt-3">
+                      Paiement sécurisé Stripe — Livraison Colissimo en France métropolitaine
+                    </p>
+                    {checkoutError && (
+                      <p className="text-xs text-red-600 text-center mt-3">
+                        {checkoutError}
+                      </p>
+                    )}
                   </div>
                 </div>
               </motion.div>
@@ -386,10 +435,10 @@ export default function Produit() {
         {/* ── Message achat ── */}
         <div className="bg-[var(--color-bordeaux)] text-white text-center py-5 px-6">
           <p className="text-sm md:text-base font-medium leading-relaxed">
-            Achetez nos produits en point de vente — pour plus
-            d&apos;informations,{" "}
+            Vous préférez acheter en magasin&nbsp;? Retrouvez-nous au point de vente
+            ci-dessous — ou{" "}
             <a
-              href="https://wa.me/33612287511"
+              href="https://wa.me/33609775287"
               target="_blank"
               rel="noopener noreferrer"
               className="underline hover:opacity-80 transition-opacity"

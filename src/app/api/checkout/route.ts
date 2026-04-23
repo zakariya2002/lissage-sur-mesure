@@ -16,12 +16,19 @@ export async function POST(request: Request) {
     }
 
     const priceId = getStripePriceId(product);
+    const taxRateId = process.env.STRIPE_TAX_RATE_FR;
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
       payment_method_types: ["card"],
-      line_items: [{ price: priceId, quantity }],
+      line_items: [
+        {
+          price: priceId,
+          quantity,
+          ...(taxRateId ? { tax_rates: [taxRateId] } : {}),
+        },
+      ],
       locale: "fr",
 
       shipping_address_collection: { allowed_countries: ["FR"] },

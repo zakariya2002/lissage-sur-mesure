@@ -26,7 +26,11 @@ export async function POST(request: Request) {
 
     try {
       const fullSession = await stripe.checkout.sessions.retrieve(session.id, {
-        expand: ["line_items", "shipping_cost.shipping_rate"],
+        expand: [
+          "line_items",
+          "shipping_cost.shipping_rate",
+          "total_details.breakdown",
+        ],
       });
 
       const lineItem = fullSession.line_items?.data[0];
@@ -55,6 +59,18 @@ export async function POST(request: Request) {
           ? shippingRate.display_name ?? "Livraison"
           : "Livraison";
 
+      // Décomposition du paiement (montants en centimes).
+      // - amount_subtotal : sous-total HT (hors TVA, hors livraison)
+      // - total_details.amount_tax : TVA appliquée
+      // - shipping_cost.amount_total : frais de livraison TTC
+      // - amount_total : total payé TTC
+      const amountTotal = fullSession.amount_total ?? 0;
+      const amountTax = fullSession.total_details?.amount_tax ?? 0;
+      const amountShipping = fullSession.shipping_cost?.amount_total ?? 0;
+      const amountSubtotal =
+        fullSession.amount_subtotal ?? Math.max(0, amountTotal - amountTax - amountShipping);
+      const currency = fullSession.currency ?? "eur";
+
       await sendOrderNotification({
         customerEmail: fullSession.customer_details?.email ?? "inconnu",
         customerName: fullSession.customer_details?.name ?? "Inconnu",
@@ -63,13 +79,18 @@ export async function POST(request: Request) {
         quantity: lineItem?.quantity ?? 1,
         shippingMethod,
         shippingAddress,
-        amountTotal: fullSession.amount_total ?? 0,
+        amountSubtotal,
+        amountTax,
+        amountShipping,
+        amountTotal,
+        currency,
         orderId: fullSession.id,
       });
     } catch (err) {
+      // On log mais on retourne 200 pour éviter que Stripe re-déclenche en boucle
+      // (un email raté n'est pas critique — il peut être renvoyé manuellement
+      // depuis le Dashboard Stripe → Events → Resend).
       console.error("[webhook] email send failed", err);
-      // On retourne 200 pour ne pas que Stripe re-trigger en boucle.
-      // L'erreur est loggée — on peut ré-envoyer manuellement depuis le Dashboard.
       return NextResponse.json({ received: true, warning: "email failed" });
     }
   }
