@@ -27,18 +27,12 @@ export default function CommandeAnnulee() {
           débité. Vous pouvez retenter quand vous le souhaitez.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex justify-center">
           <Link
-            href="/boutique"
-            className="px-10 py-4 bg-[var(--color-black)] text-white text-[11px] font-medium uppercase tracking-[0.2em] hover:bg-[var(--color-gray-800)] transition-colors"
+            href="/#produit"
+            className="inline-block px-10 py-4 bg-[var(--color-black)] text-white text-[11px] font-medium uppercase tracking-[0.2em] hover:bg-[var(--color-gray-800)] transition-colors"
           >
-            Retour à la boutique
-          </Link>
-          <Link
-            href="/"
-            className="px-10 py-4 border border-[var(--color-black)] text-[var(--color-black)] text-[11px] font-medium uppercase tracking-[0.2em] hover:bg-[var(--color-black)] hover:text-white transition-colors"
-          >
-            Accueil
+            Retour à l&apos;accueil
           </Link>
         </div>
       </div>
