@@ -7,7 +7,8 @@ export const metadata: Metadata = {
 /**
  * MENTIONS LÉGALES
  * ⚠️ BROUILLON — À faire valider par un avocat ou un DPO.
- * Remplacer les [PLACEHOLDER] par les informations réelles.
+ * Placeholders restants à compléter : [CAPITAL SOCIAL], [N° TVA INTRA],
+ * [DIRECTEUR DE LA PUBLICATION].
  */
 export default function MentionsLegales() {
   return (
@@ -30,16 +31,17 @@ export default function MentionsLegales() {
               Le site <strong>lissagesurmesure.fr</strong> est édité par :
             </p>
             <ul className="mt-3 space-y-1">
-              {/* REMPLACER : raison sociale, statut, adresse, SIRET */}
-              <li><strong>Raison sociale :</strong> [NOM DE LA SOCIÉTÉ / NOM PRÉNOM si auto-entrepreneur]</li>
-              <li><strong>Forme juridique :</strong> [SAS / SARL / Micro-entreprise / etc.]</li>
-              <li><strong>Capital social :</strong> [MONTANT] €</li>
-              <li><strong>Siège social :</strong> [ADRESSE COMPLÈTE]</li>
-              <li><strong>SIRET :</strong> [NUMÉRO SIRET]</li>
-              <li><strong>Numéro TVA intracommunautaire :</strong> [NUMÉRO TVA ou « Non applicable »]</li>
-              <li><strong>Directeur de la publication :</strong> [NOM PRÉNOM]</li>
-              <li><strong>Email :</strong> contact@lissagesurmesure.fr</li>
-              <li><strong>Téléphone :</strong> [NUMÉRO]</li>
+              <li><strong>Raison sociale :</strong> LISSAGE SUR MESURE</li>
+              <li><strong>Forme juridique :</strong> SAS (société par actions simplifiée)</li>
+              <li><strong>Capital social :</strong> [CAPITAL SOCIAL]&nbsp;€</li>
+              <li><strong>Siège social :</strong> 25B avenue Paul Vaillant Couturier, 93150 Le Blanc-Mesnil, France</li>
+              <li><strong>SIRET :</strong> 993 914 415 00019</li>
+              <li><strong>SIREN :</strong> 993 914 415</li>
+              <li><strong>Code APE/NAF :</strong> 85.59A — Formation continue d&apos;adultes</li>
+              <li><strong>Numéro TVA intracommunautaire :</strong> [N° TVA INTRA]</li>
+              <li><strong>Directeur de la publication :</strong> [DIRECTEUR DE LA PUBLICATION]</li>
+              <li><strong>Email :</strong> lissagesurmesureformation@gmail.com</li>
+              <li><strong>Téléphone :</strong> +33&nbsp;6&nbsp;09&nbsp;77&nbsp;52&nbsp;87</li>
             </ul>
           </section>
 
@@ -48,12 +50,10 @@ export default function MentionsLegales() {
             <h2 className="font-serif text-xl text-[var(--color-black)] mb-4">
               2. Hébergeur
             </h2>
-            {/* REMPLACER par les informations de l'hébergeur réel */}
             <ul className="space-y-1">
-              <li><strong>Nom :</strong> [Vercel Inc. / OVH / Netlify / etc.]</li>
-              <li><strong>Adresse :</strong> [ADRESSE DE L&apos;HÉBERGEUR]</li>
-              <li><strong>Téléphone :</strong> [NUMÉRO]</li>
-              <li><strong>Site web :</strong> [URL]</li>
+              <li><strong>Nom :</strong> Vercel Inc.</li>
+              <li><strong>Adresse :</strong> 340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis</li>
+              <li><strong>Site web :</strong> <a href="https://vercel.com" className="text-[var(--color-black)] underline">https://vercel.com</a></li>
             </ul>
           </section>
 

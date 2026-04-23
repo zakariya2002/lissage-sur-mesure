@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 /**
  * POLITIQUE DE CONFIDENTIALITÉ — RGPD
  * ⚠️ BROUILLON — À faire valider par un avocat ou un DPO.
- * Remplacer les [PLACEHOLDER] par les informations réelles.
+ * Placeholders restants à compléter : (aucun)
  */
 export default function Confidentialite() {
   return (
@@ -32,16 +32,15 @@ export default function Confidentialite() {
             </h2>
             <p>Le responsable du traitement des données personnelles est :</p>
             <ul className="mt-3 space-y-1">
-              {/* REMPLACER */}
-              <li><strong>Identité :</strong> [NOM DE LA SOCIÉTÉ / NOM PRÉNOM]</li>
-              <li><strong>Adresse :</strong> [ADRESSE COMPLÈTE]</li>
-              <li><strong>Email :</strong> contact@lissagesurmesure.fr</li>
-              <li><strong>Téléphone :</strong> [NUMÉRO]</li>
+              <li><strong>Identité :</strong> LISSAGE SUR MESURE, SAS au capital de [CAPITAL SOCIAL]&nbsp;€</li>
+              <li><strong>SIRET :</strong> 993 914 415 00019</li>
+              <li><strong>Adresse :</strong> 25B avenue Paul Vaillant Couturier, 93150 Le Blanc-Mesnil, France</li>
+              <li><strong>Email :</strong> lissagesurmesureformation@gmail.com</li>
+              <li><strong>Téléphone :</strong> +33&nbsp;6&nbsp;09&nbsp;77&nbsp;52&nbsp;87</li>
             </ul>
             <p className="mt-3">
-              {/* Si vous avez désigné un DPO, ajoutez ses coordonnées ici */}
               Pour toute question relative à la protection de vos données, vous pouvez
-              nous contacter à l&apos;adresse : <strong>contact@lissagesurmesure.fr</strong>
+              nous contacter à l&apos;adresse&nbsp;: <strong>lissagesurmesureformation@gmail.com</strong>.
             </p>
           </section>
 
@@ -117,12 +116,12 @@ export default function Confidentialite() {
             <ul className="list-disc pl-5 mt-3 space-y-1">
               <li>L&apos;équipe Lissage sur Mesure (responsable de traitement)</li>
               <li>
-                Notre hébergeur : <strong>[Vercel / OVH / autre]</strong> —
-                pour le stockage et la diffusion du site
+                Notre hébergeur&nbsp;: <strong>Vercel Inc.</strong> (340 S Lemon Ave #4133,
+                Walnut, CA 91789, États-Unis) — pour le stockage et la diffusion du site
               </li>
-              {/* REMPLACER / COMPLÉTER selon les outils utilisés */}
               <li>
-                Notre outil d&apos;emailing (si applicable) : <strong>[Brevo / Mailchimp / autre]</strong>
+                Notre prestataire de paiement&nbsp;: <strong>Stripe</strong> — pour le
+                traitement sécurisé des transactions liées aux commandes
               </li>
             </ul>
             <p className="mt-3">
@@ -196,13 +195,10 @@ export default function Confidentialite() {
               </li>
             </ul>
             <p className="mt-4">
-              <strong>Pour exercer vos droits :</strong> envoyez un email à{" "}
-              <a href="mailto:contact@lissagesurmesure.fr" className="text-[var(--color-black)] underline">
-                contact@lissagesurmesure.fr
-              </a>{" "}
-              en précisant votre demande et en joignant une copie d&apos;un justificatif
-              d&apos;identité. Nous nous engageons à vous répondre dans un délai d&apos;un
-              mois.
+              <strong>Pour exercer vos droits&nbsp;:</strong> envoyez un email à{" "}
+              <strong>lissagesurmesureformation@gmail.com</strong> en précisant votre demande et en
+              joignant une copie d&apos;un justificatif d&apos;identité. Nous nous
+              engageons à vous répondre dans un délai d&apos;un mois.
             </p>
             <p className="mt-3">
               <strong>Réclamation auprès de la CNIL :</strong> Si vous estimez que le

@@ -5,9 +5,11 @@ export const metadata: Metadata = {
 };
 
 /**
- * CGV — Conditions Générales de Vente (Formation)
- * ⚠️ BROUILLON — À faire valider par un avocat.
- * Remplacer les [PLACEHOLDER] par les informations réelles.
+ * CGV — Conditions Générales de Vente
+ * Couvre : vente de produits + prestations de formation.
+ * ⚠️ BROUILLON — À faire valider par un avocat avant publication définitive.
+ * Placeholders restants à compléter : [CAPITAL SOCIAL],
+ * [N° TVA INTRA], [NOM ET COORDONNÉES DU MÉDIATEUR].
  */
 export default function CGV() {
   return (
@@ -27,11 +29,24 @@ export default function CGV() {
           <section>
             <h2 className="font-serif text-xl text-[var(--color-black)] mb-4">1. Objet</h2>
             <p>
-              Les présentes Conditions Générales de Vente (CGV) régissent les relations
-              contractuelles entre <strong>[NOM DE LA SOCIÉTÉ]</strong>, ci-après
-              &ldquo;Lissage sur Mesure&rdquo;, et toute personne physique ou morale
-              souhaitant bénéficier de ses prestations de formation professionnelle,
-              ci-après &ldquo;le Client&rdquo;.
+              Les présentes Conditions Générales de Vente (CGV) sont conclues entre
+              <strong> LISSAGE SUR MESURE</strong>, SAS au capital de
+              <strong> [CAPITAL SOCIAL]&nbsp;€</strong>, immatriculée au
+              répertoire SIRENE sous le numéro SIRET
+              <strong> 993&nbsp;914&nbsp;415&nbsp;00019</strong>, dont le siège
+              social est situé
+              <strong> 25B avenue Paul Vaillant Couturier, 93150 Le Blanc-Mesnil, France</strong>,
+              ci-après désignée &ldquo;le Vendeur&rdquo; ou &ldquo;Lissage sur Mesure&rdquo;,
+              et toute personne physique ou morale procédant à un achat sur le
+              site, ci-après &ldquo;le Client&rdquo;.
+            </p>
+            <p className="mt-3">
+              Email&nbsp;: <strong>lissagesurmesureformation@gmail.com</strong> — Téléphone&nbsp;:
+              <strong> +33&nbsp;6&nbsp;09&nbsp;77&nbsp;52&nbsp;87</strong>
+            </p>
+            <p className="mt-3 text-xs text-[var(--color-gray-500)]">
+              Code APE/NAF&nbsp;: 85.59A — Formation continue d&apos;adultes.
+              N°&nbsp;TVA intracommunautaire&nbsp;: <strong>[N° TVA INTRA]</strong>.
             </p>
           </section>
 
@@ -66,10 +81,21 @@ export default function CGV() {
           <section>
             <h2 className="font-serif text-xl text-[var(--color-black)] mb-4">4. Tarifs et modalités de paiement</h2>
             <p>
-              Les tarifs sont indiqués en euros et [TTC / HT selon votre statut TVA].
-              Le paiement peut être effectué par [virement bancaire / carte bancaire /
-              chèque / CPF]. Un acompte de [MONTANT ou POURCENTAGE] peut être demandé
-              à l&apos;inscription.
+              Les prix sont indiqués en euros, <strong>hors taxes (HT)</strong>,
+              le site s&apos;adressant à une clientèle professionnelle (B2B).
+              La <strong>TVA française au taux en vigueur (20&nbsp;%)</strong> est
+              ajoutée et affichée lors du processus de commande, avant
+              validation finale du paiement. Le montant TTC ainsi que la TVA
+              applicable figurent sur la facture remise au Client.
+            </p>
+            <p className="mt-3">
+              Les frais de livraison sont indiqués séparément lors du processus
+              de commande, avant validation finale du paiement.
+            </p>
+            <p className="mt-3">
+              Le Vendeur se réserve le droit de modifier ses prix à tout moment.
+              Les produits seront facturés sur la base des tarifs en vigueur au
+              moment de la validation de la commande.
             </p>
           </section>
 
@@ -95,8 +121,68 @@ export default function CGV() {
           <section>
             <h2 className="font-serif text-xl text-[var(--color-black)] mb-4">6. Protection des données personnelles</h2>
             <p>
-              Les données collectées dans le cadre de l&apos;inscription et du suivi de
-              formation sont traitées conformément à notre{" "}
+              Conformément aux articles L221-18 et suivants du Code de la
+              consommation, le Client consommateur dispose d&apos;un délai de
+              <strong> 14 jours</strong> à compter de la réception du produit
+              pour exercer son droit de rétractation, sans avoir à justifier de
+              motif ni à payer de pénalités.
+            </p>
+            <p className="mt-3">
+              La rétractation s&apos;exerce par notification écrite à
+              <strong> lissagesurmesureformation@gmail.com</strong>. Les produits doivent être
+              retournés dans leur emballage d&apos;origine, non ouverts et en
+              parfait état, dans un délai de 14 jours suivant la notification.
+              Les frais de retour sont à la charge du Client.
+            </p>
+            <p className="mt-3">
+              Le remboursement est effectué dans un délai de 14 jours après
+              réception du produit, par le même moyen de paiement utilisé lors
+              de l&apos;achat.
+            </p>
+            <p className="mt-3 text-xs text-[var(--color-gray-500)]">
+              <strong>Exception&nbsp;:</strong> conformément à l&apos;article L221-28 5°
+              du Code de la consommation, les produits descellés après livraison
+              ne peuvent être renvoyés pour des raisons d&apos;hygiène ou de
+              protection de la santé.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="font-serif text-xl text-[var(--color-black)] mb-4">8. Garanties</h2>
+            <p>
+              Les produits bénéficient de la garantie légale de conformité
+              (articles L217-3 et suivants du Code de la consommation) et de la
+              garantie contre les vices cachés (articles 1641 et suivants du
+              Code civil). En cas de défaut, le Client peut contacter
+              <strong> lissagesurmesureformation@gmail.com</strong>.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="font-serif text-xl text-[var(--color-black)] mb-4">9. Formations professionnelles</h2>
+            <p>
+              Pour les prestations de formation, l&apos;inscription est confirmée
+              après réception du règlement (ou de l&apos;accord de prise en
+              charge par un organisme financeur, dont les OPCO).
+            </p>
+            <p className="mt-3">
+              <strong>Annulation par le Client&nbsp;:</strong>
+            </p>
+            <ul className="list-disc pl-5 mt-3 space-y-1">
+              <li>Plus de 15 jours avant la formation&nbsp;: remboursement intégral</li>
+              <li>Entre 8 et 15 jours&nbsp;: retenue de 50&nbsp;% du montant</li>
+              <li>Moins de 8 jours ou absence&nbsp;: aucun remboursement</li>
+            </ul>
+            <p className="mt-3">
+              La formation constitue une obligation de moyens et non de résultat.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="font-serif text-xl text-[var(--color-black)] mb-4">10. Données personnelles</h2>
+            <p>
+              Les données collectées dans le cadre de la commande ou de
+              l&apos;inscription sont traitées conformément à notre{" "}
               <a href="/confidentialite" className="text-[var(--color-black)] underline">
                 Politique de confidentialité
               </a>.
@@ -126,17 +212,24 @@ export default function CGV() {
               Lissage sur Mesure.
             </p>
             <p className="mt-3">
-              <strong>Médiation :</strong> Conformément à l&apos;article L612-1 du Code
-              de la consommation, le Client peut recourir gratuitement au service de
-              médiation : [NOM DU MÉDIATEUR — à compléter].
+              Conformément à l&apos;article L612-1 du Code de la consommation,
+              le Client consommateur peut recourir gratuitement au service de
+              médiation&nbsp;: <strong>[NOM ET COORDONNÉES DU MÉDIATEUR]</strong>.
+            </p>
+            <p className="mt-3">
+              À défaut de résolution amiable, les tribunaux français seront
+              compétents.
             </p>
           </section>
         </div>
 
         <div className="mt-12 p-6 bg-[var(--color-gray-100)] border-l-2 border-[var(--color-black)]">
           <p className="text-xs text-[var(--color-gray-500)]">
-            <strong>Avertissement :</strong> Ce document est un brouillon. Il doit
-            être validé par un avocat avant publication définitive.
+            <strong>Avertissement&nbsp;:</strong> Ce document est un brouillon
+            en attente de validation par un avocat avant publication définitive.
+            Les éléments suivants restent à compléter&nbsp;: capital social de
+            la SAS, email de contact professionnel, numéro de TVA
+            intracommunautaire, et désignation du médiateur de la consommation.
           </p>
         </div>
 
