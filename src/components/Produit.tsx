@@ -7,8 +7,8 @@ import { motion, AnimatePresence } from "framer-motion";
 /* ── Point de vente ── */
 const POINT_DE_VENTE = {
   nom: "Lissage sur Mesure — Point de vente",
-  telephone: "+33 6 12 28 75 11",
-  telephoneDisplay: "06 12 28 75 11",
+  telephone: "+33 6 09 77 52 87",
+  telephoneDisplay: "06 09 77 52 87",
   adresse: "7 Place de l'Hôtel de Ville, 93600 Aulnay-sous-Bois",
   lat: 48.9326,
   lng: 2.4964,
@@ -100,7 +100,7 @@ const packs: Pack[] = [
     id: "sur-mesure",
     nom: "Lissage Sur Mesure",
     sousTitre: "La r\u00e9f\u00e9rence du lissage personnalis\u00e9",
-    prix: "183,33 \u20ac",
+    prix: "183,33 \u20ac HT",
     prixHT: "183,33 \u20ac",
     image: "/images/product-shoot-white.png",
     imageAlt: "Produit Lissage sur Mesure",
@@ -121,7 +121,7 @@ const packs: Pack[] = [
     id: "silk",
     nom: "Lissage SILK",
     sousTitre: "Sp\u00e9cial coloration et d\u00e9coloration",
-    prix: "191,67 \u20ac",
+    prix: "191,67 \u20ac HT",
     prixHT: "191,67 \u20ac",
     image: "/images/product-shoot-white-v2.png",
     imageAlt: "Produit Lissage SILK",
@@ -389,7 +389,7 @@ export default function Produit() {
             Achetez nos produits en point de vente — pour plus
             d&apos;informations,{" "}
             <a
-              href="https://wa.me/33612287511"
+              href="https://wa.me/33609775287"
               target="_blank"
               rel="noopener noreferrer"
               className="underline hover:opacity-80 transition-opacity"

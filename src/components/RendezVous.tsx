@@ -3,7 +3,7 @@
 import Image from "next/image";
 import ScrollReveal from "./ScrollReveal";
 
-const WHATSAPP_NUMBER = "33612287511";
+const WHATSAPP_NUMBER = "33609775287";
 const WHATSAPP_MESSAGE = encodeURIComponent(
   "Bonjour, je souhaite en savoir plus sur la formation Lissage sur Mesure."
 );
@@ -108,7 +108,7 @@ export default function RendezVous() {
                 </a>
 
                 <p className="text-[var(--color-gray-400)] text-sm mt-6">
-                  +33 6 12 28 75 11
+                  +33 6 09 77 52 87
                 </p>
 
                 <div className="mt-10 pt-8 border-t border-[var(--color-gray-200)]">
