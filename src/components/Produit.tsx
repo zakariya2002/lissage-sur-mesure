@@ -106,7 +106,7 @@ const packs: Pack[] = [
     imageAlt: "Produit Lissage sur Mesure",
     contenu: "Produit de lissage Sur Mesure + Shampoing clarifiant — jusqu\u2019\u00e0 10 lissages par pack",
     description1:
-      "N\u00e9e d\u2019un constat simple\u00a0: aucun lissage ne devrait fragiliser le cheveu pour \u00eatre efficace. Chaque actif a \u00e9t\u00e9 s\u00e9lectionn\u00e9 avec une exigence pr\u00e9cise \u2014 obtenir un r\u00e9sultat performant tout en respectant la fibre capillaire.",
+      "N\u00e9e d\u2019un constat simple\u00a0: aucun lissage ne devrait fragiliser le cheveu pour \u00eatre efficace. Chaque actif a \u00e9t\u00e9 s\u00e9lectionn\u00e9 avec une exigence pr\u00e9cise\u00a0: obtenir un r\u00e9sultat performant tout en respectant la fibre capillaire.",
     description2:
       "Compatible avec les cheveux d\u00e9color\u00e9s et m\u00e9ch\u00e9s gr\u00e2ce \u00e0 un protocole expert qui adapte les dosages, les temp\u00e9ratures et les temps de pose.",
     actifs: actifsBase,
