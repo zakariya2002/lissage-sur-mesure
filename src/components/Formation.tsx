@@ -1,6 +1,8 @@
+import Image from "next/image";
+
 const modules = [
   { title: "Diagnostic capillaire personnalisé", description: "Apprendre à réaliser un diagnostic capillaire complet : porosité, élasticité, historique chimique et attentes de la cliente. La base de toute prestation sur mesure." },
-  { title: "Protocole Lissage sur Mesure", description: "Formuler un lissage adapté à chaque profil capillaire. Dosages, temps de pose, techniques d'application — tout est ajusté selon le diagnostic et le résultat souhaité." },
+  { title: "Protocole Lissage sur Mesure", description: "Formuler un lissage adapté à chaque profil capillaire. Dosages, temps de pose, techniques d'application : tout est ajusté selon le diagnostic et le résultat souhaité." },
   { title: "Expertise cheveux sensibilisés", description: "Module dédié aux cheveux blonds, colorés ou fragilisés : adapter le protocole sur mesure pour garantir un résultat respectueux de la fibre." },
   { title: "Pratique & mise en situation", description: "Cas pratiques sur modèles réels : du diagnostic à la réalisation du lissage personnalisé, pour valider votre maîtrise en conditions salon." },
 ];
@@ -34,17 +36,43 @@ export default function Formation() {
               </div>
             </div>
 
-            {/* Badge OPCO */}
-            <div className="flex justify-center mb-10">
-              <div className="bg-white border border-[var(--color-gray-200)] p-6 text-center max-w-[220px]">
-                <div className="w-16 h-16 mx-auto mb-3 bg-[var(--color-black)] flex items-center justify-center rounded">
-                  <span className="text-white font-bold text-[11px] tracking-wider">OPCO</span>
+            {/* Organismes de financement */}
+            <div className="mb-10">
+              <p className="text-[10px] text-[var(--color-gray-400)] tracking-[0.25em] uppercase mb-5">
+                Financements acceptés
+              </p>
+              <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
+                <div className="bg-white border border-[var(--color-gray-200)] px-6 py-4 flex items-center justify-center h-20 w-40">
+                  <Image
+                    src="/images/logo-opco-ep.jpeg"
+                    alt="OPCO EP : Opérateur de compétences des Entreprises de Proximité"
+                    width={220}
+                    height={90}
+                    className="max-h-12 w-auto object-contain"
+                  />
                 </div>
-                <p className="text-[var(--color-black)] font-semibold text-sm mb-1">Éligible OPCO</p>
-                <p className="text-[var(--color-gray-500)] text-xs leading-relaxed">
-                  Prise en charge par votre opérateur de compétences
-                </p>
+                <div className="bg-white border border-[var(--color-gray-200)] px-6 py-4 flex items-center justify-center h-20 w-40">
+                  <Image
+                    src="/images/logo-agefice.jpeg"
+                    alt="AGEFICE : Fonds d'assurance formation des chefs d'entreprise"
+                    width={120}
+                    height={120}
+                    className="max-h-14 w-auto object-contain"
+                  />
+                </div>
+                <div className="bg-white border border-[var(--color-gray-200)] px-6 py-4 flex items-center justify-center h-20 w-40">
+                  <Image
+                    src="/images/logo-fafcea.jpeg"
+                    alt="FAFCEA : Fonds d'Assurance Formation des Chefs d'Entreprise Artisanale"
+                    width={220}
+                    height={100}
+                    className="max-h-12 w-auto object-contain"
+                  />
+                </div>
               </div>
+              <p className="text-[var(--color-gray-500)] text-xs leading-relaxed mt-5 text-center max-w-md mx-auto">
+                Prise en charge possible par votre opérateur de compétences
+              </p>
             </div>
 
             <div className="block">
@@ -112,7 +140,7 @@ export default function Formation() {
                   Chaque pack à 183,33&nbsp;€ comprend le produit de lissage + un shampoing
                   clarifiant, et permet de réaliser jusqu&apos;à 10 lissages clients.
                   À ~120&nbsp;€ le lissage, c&apos;est 1&nbsp;200&nbsp;€ de chiffre d&apos;affaires
-                  généré — soit un rendement multiplié par 5.
+                  généré, soit un rendement multiplié par 5.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <div className="flex items-center gap-3">
@@ -204,7 +232,7 @@ export default function Formation() {
               pour discuter de votre projet, vos objectifs et les options de financement.
             </p>
             <p className="text-[var(--color-gray-400)] mb-8 max-w-sm mx-auto text-xs leading-relaxed">
-              Diagnostic capillaire, protocole personnalisé, expertise cheveux sensibilisés — formez-vous auprès d&apos;une experte avec 10 ans d&apos;expérience.
+              Diagnostic capillaire, protocole personnalisé, expertise cheveux sensibilisés. Formez-vous auprès d&apos;une experte avec 10 ans d&apos;expérience.
             </p>
             <a
               href="#rendez-vous"

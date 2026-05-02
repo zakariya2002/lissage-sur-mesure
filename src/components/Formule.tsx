@@ -74,7 +74,7 @@ export default function Formule() {
                 <div className="overflow-hidden img-zoom relative aspect-[4/5]">
                   <Image
                     src="/images/woman-smiling.jpg"
-                    alt="Résultat lissage sur mesure — cheveux lisses et brillants"
+                    alt="Résultat lissage sur mesure : cheveux lisses et brillants"
                     fill
                     className="object-cover object-[center_35%]"
                     sizes="(max-width: 768px) 100vw, 50vw"

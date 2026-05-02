@@ -75,7 +75,7 @@ export default function Vision() {
               <div className="aspect-[6/5] overflow-hidden group img-zoom">
                 <Image
                   src="/images/woman-lissage-action.jpg"
-                  alt="Lissage sur mesure — résultat brillant et lisse"
+                  alt="Lissage sur mesure : résultat brillant et lisse"
                   width={1024}
                   height={1365}
                   className="w-full h-full object-cover object-top"

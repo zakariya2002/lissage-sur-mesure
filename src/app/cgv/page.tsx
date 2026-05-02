@@ -41,11 +41,11 @@ export default function CGV() {
               site, ci-après &ldquo;le Client&rdquo;.
             </p>
             <p className="mt-3">
-              Email&nbsp;: <strong>lissagesurmesureformation@gmail.com</strong> — Téléphone&nbsp;:
+              Email&nbsp;: <strong>lissagesurmesureformation@gmail.com</strong>. Téléphone&nbsp;:
               <strong> +33&nbsp;6&nbsp;09&nbsp;77&nbsp;52&nbsp;87</strong>
             </p>
             <p className="mt-3 text-xs text-[var(--color-gray-500)]">
-              Code APE/NAF&nbsp;: 85.59A — Formation continue d&apos;adultes.
+              Code APE/NAF&nbsp;: 85.59A : Formation continue d&apos;adultes.
               N°&nbsp;TVA intracommunautaire&nbsp;: <strong>[N° TVA INTRA]</strong>.
             </p>
           </section>

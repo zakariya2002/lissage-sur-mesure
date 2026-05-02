@@ -52,7 +52,7 @@ export default function Lissage() {
                 </h3>
                 <p className="text-[var(--color-gray-500)] leading-[1.8]">
                   Cheveux épais, fins, bouclés, crépus, colorés, méchés ou
-                  décolorés — aucun cheveu ne se traite de la même façon.
+                  décolorés. Aucun cheveu ne se traite de la même façon.
                   C&apos;est pourquoi chaque séance commence par un diagnostic
                   capillaire complet, réalisé par une experte avec plus de 10 ans
                   d&apos;expérience.
@@ -72,7 +72,7 @@ export default function Lissage() {
                   {[
                     "Plus douce sur cheveux sensibilisés",
                     "Plus gainante sur cheveux épais",
-                    "Compatible cheveux blonds ou décolorés — protocole précis",
+                    "Compatible cheveux blonds ou décolorés, protocole précis",
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-3">
                       <span className="w-5 h-px bg-[var(--color-bordeaux)] shrink-0" />
@@ -96,7 +96,7 @@ export default function Lissage() {
                     "Température du fer différente",
                     "Nombre de passages adapté",
                     "Temps de pose ajusté",
-                    "Zones traitées différemment — racines / longueurs",
+                    "Zones traitées différemment : racines / longueurs",
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-3">
                       <span className="w-5 h-px bg-[var(--color-black)] shrink-0" />
@@ -109,7 +109,7 @@ export default function Lissage() {
               <blockquote className="relative pl-6 py-2 border-l border-[var(--color-bordeaux)]">
                 <p className="text-lg font-serif italic text-[var(--color-black)] leading-snug">
                   Ici, aucun lissage ne se ressemble. Votre diagnostic guide
-                  tout — c&apos;est la promesse du sur mesure.
+                  tout, c&apos;est la promesse du sur mesure.
                 </p>
               </blockquote>
 

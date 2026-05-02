@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 /* ── Point de vente ── */
 const POINT_DE_VENTE = {
-  nom: "Lissage sur Mesure — Point de vente",
+  nom: "Lissage sur Mesure : Point de vente",
   telephone: "+33 6 09 77 52 87",
   telephoneDisplay: "06 09 77 52 87",
   adresse: "7 Place de l'Hôtel de Ville, 93600 Aulnay-sous-Bois",
@@ -70,7 +70,7 @@ const actifsBase = [
 /* ── Actif phare SILVER ── */
 const actifSilver = {
   nom: "SILVER",
-  description: "Actif phare — protection couleur",
+  description: "Actif phare : protection couleur",
   icon: (
     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
@@ -104,7 +104,7 @@ const packs: Pack[] = [
     prixHT: "183,33 \u20ac HT",
     image: "/images/product-shoot-white.png",
     imageAlt: "Produit Lissage sur Mesure",
-    contenu: "Produit de lissage Sur Mesure + Shampoing clarifiant — jusqu\u2019\u00e0 10 lissages par pack",
+    contenu: "Produit de lissage Sur Mesure + Shampoing clarifiant : jusqu\u2019\u00e0 10 lissages par pack",
     description1:
       "N\u00e9e d\u2019un constat simple\u00a0: aucun lissage ne devrait fragiliser le cheveu pour \u00eatre efficace. Chaque actif a \u00e9t\u00e9 s\u00e9lectionn\u00e9 avec une exigence pr\u00e9cise\u00a0: obtenir un r\u00e9sultat performant tout en respectant la fibre capillaire.",
     description2:
@@ -125,7 +125,7 @@ const packs: Pack[] = [
     prixHT: "191,67 \u20ac HT",
     image: "/images/product-shoot-white-v2.png",
     imageAlt: "Produit Lissage SILK",
-    contenu: "Produit de lissage SILK + Shampoing clarifiant — jusqu\u2019\u00e0 10 lissages par pack",
+    contenu: "Produit de lissage SILK + Shampoing clarifiant : jusqu\u2019\u00e0 10 lissages par pack",
     description1:
       "Formul\u00e9 sp\u00e9cifiquement pour les cheveux color\u00e9s et d\u00e9color\u00e9s, le Lissage SILK int\u00e8gre l\u2019actif phare SILVER pour une protection maximale de la couleur tout en lissant la fibre en profondeur.",
     description2:
@@ -262,7 +262,7 @@ export default function Produit() {
             souhait&eacute;.
           </p>
           <p className="text-[var(--color-bordeaux)] text-sm font-medium max-w-lg mx-auto leading-relaxed italic">
-            Diagnostic r&eacute;alis&eacute; par une experte du lissage — plus
+            Diagnostic r&eacute;alis&eacute; par une experte du lissage, plus
             de 10 ans d&apos;exp&eacute;rience.
           </p>
         </div>
@@ -390,7 +390,7 @@ export default function Produit() {
                       {loadingId === pack.id ? "Redirection…" : "Acheter en ligne"}
                     </button>
                     <p className="text-[11px] text-[var(--color-gray-400)] text-center mt-3">
-                      Paiement sécurisé Stripe — Livraison Colissimo en France métropolitaine
+                      Paiement sécurisé Stripe. Livraison Colissimo en France métropolitaine
                     </p>
                     {checkoutError && (
                       <p className="text-xs text-red-600 text-center mt-3">
@@ -424,7 +424,7 @@ export default function Produit() {
               className="mt-6 mx-auto flex items-center gap-2 text-[var(--color-bordeaux)] hover:text-[var(--color-black)] transition-colors group"
             >
               <span className="text-xs tracking-wide">
-                Découvrir le pack <strong>SILK</strong> — spécial coloration
+                Découvrir le pack <strong>SILK</strong> : spécial coloration
               </span>
               <span className="text-lg group-hover:translate-x-1 transition-transform">&rsaquo;</span>
             </button>
@@ -436,7 +436,7 @@ export default function Produit() {
         <div className="bg-[var(--color-bordeaux)] text-white text-center py-5 px-6">
           <p className="text-sm md:text-base font-medium leading-relaxed">
             Vous préférez acheter en magasin&nbsp;? Retrouvez-nous au point de vente
-            ci-dessous — ou{" "}
+            ci-dessous, ou{" "}
             <a
               href="https://wa.me/33609775287"
               target="_blank"

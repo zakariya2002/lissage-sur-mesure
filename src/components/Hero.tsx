@@ -69,10 +69,10 @@ export default function Hero() {
             transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
             className="mb-10"
           >
-            <h1 className="sr-only">Lissage sur Mesure — Lissage professionnel, formation et vente de produits à Aulnay-sous-Bois</h1>
+            <h1 className="sr-only">Lissage sur Mesure : Lissage professionnel, formation et vente de produits à Aulnay-sous-Bois</h1>
             <Image
               src="/images/logo-white.png"
-              alt="Lissage sur Mesure — Salon de lissage professionnel à Aulnay-sous-Bois"
+              alt="Lissage sur Mesure : Salon de lissage professionnel à Aulnay-sous-Bois"
               width={500}
               height={220}
               className="mx-auto w-64 md:w-80 lg:w-96 h-auto"

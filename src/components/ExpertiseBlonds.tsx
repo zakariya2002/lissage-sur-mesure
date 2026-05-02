@@ -160,7 +160,7 @@ export default function ExpertiseBlonds() {
                     et de lancer mon inscription CPF en quelques jours.&rdquo;
                   </p>
                   <p className="text-[var(--color-gray-400)] text-xs mt-3 tracking-wider uppercase">
-                    — Professionnelle en reconversion
+                    Professionnelle en reconversion
                   </p>
                 </div>
               </div>

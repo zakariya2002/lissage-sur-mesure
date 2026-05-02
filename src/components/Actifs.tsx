@@ -186,7 +186,7 @@ export default function Actifs() {
             className="cta-fill inline-block px-10 py-4 bg-[var(--color-black)] text-white text-[11px] font-medium uppercase tracking-[0.2em]"
           >
             <span className="cta-bg bg-[var(--color-gray-800)]" />
-            <span className="cta-text">En savoir plus — Réserver un appel</span>
+            <span className="cta-text">En savoir plus : Réserver un appel</span>
           </a>
         </ScrollReveal>
       </div>

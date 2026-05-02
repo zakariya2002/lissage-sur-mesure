@@ -37,7 +37,7 @@ export default function MentionsLegales() {
               <li><strong>Siège social :</strong> 25B avenue Paul Vaillant Couturier, 93150 Le Blanc-Mesnil, France</li>
               <li><strong>SIRET :</strong> 993 914 415 00019</li>
               <li><strong>SIREN :</strong> 993 914 415</li>
-              <li><strong>Code APE/NAF :</strong> 85.59A — Formation continue d&apos;adultes</li>
+              <li><strong>Code APE/NAF :</strong> 85.59A : Formation continue d&apos;adultes</li>
               <li><strong>Numéro TVA intracommunautaire :</strong> [N° TVA INTRA]</li>
               <li><strong>Directeur de la publication :</strong> [DIRECTEUR DE LA PUBLICATION]</li>
               <li><strong>Email :</strong> lissagesurmesureformation@gmail.com</li>

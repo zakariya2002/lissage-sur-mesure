@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     apple: "/apple-icon.png",
   },
   openGraph: {
-    title: "Lissage sur Mesure — Lissage & Formation à Aulnay-sous-Bois",
+    title: "Lissage sur Mesure : Lissage & Formation à Aulnay-sous-Bois",
     description:
       "Lissage professionnel sur mesure, spécialiste cheveux blonds & décolorés. Formation certifiante éligible CPF à Aulnay-sous-Bois.",
     type: "website",
@@ -68,13 +68,13 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Lissage sur Mesure — Salon de lissage professionnel à Aulnay-sous-Bois",
+        alt: "Lissage sur Mesure : Salon de lissage professionnel à Aulnay-sous-Bois",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lissage sur Mesure — Lissage & Formation à Aulnay-sous-Bois",
+    title: "Lissage sur Mesure : Lissage & Formation à Aulnay-sous-Bois",
     description:
       "Lissage professionnel sur mesure, spécialiste cheveux blonds & décolorés. Formation éligible CPF.",
     images: ["/og-image.jpg"],
@@ -125,7 +125,7 @@ const jsonLd = {
         name: "Lissage sur Mesure",
       },
       educationalCredentialAwarded: "Certification professionnelle",
-      financialAidEligible: "CPF — Compte Personnel de Formation",
+      financialAidEligible: "CPF : Compte Personnel de Formation",
     },
     {
       "@type": "FAQPage",

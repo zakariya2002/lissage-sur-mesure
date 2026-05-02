@@ -16,7 +16,7 @@ export const products: Product[] = [
     nom: "Lissage Sur Mesure",
     sousTitre: "La référence du lissage personnalisé",
     description:
-      "Produit de lissage Sur Mesure + Shampoing clarifiant — jusqu'à 10 lissages par pack. Compatible cheveux décolorés et méchés.",
+      "Produit de lissage Sur Mesure + Shampoing clarifiant : jusqu'à 10 lissages par pack. Compatible cheveux décolorés et méchés.",
     prix: 18333,
     prixDisplay: "183,33 €",
     image: "/images/product-shoot-white.png",
@@ -28,7 +28,7 @@ export const products: Product[] = [
     nom: "Lissage SILK",
     sousTitre: "Spécial coloration et décoloration",
     description:
-      "Produit de lissage SILK + Shampoing clarifiant — jusqu'à 10 lissages par pack. Intègre l'actif phare SILVER pour la protection couleur.",
+      "Produit de lissage SILK + Shampoing clarifiant : jusqu'à 10 lissages par pack. Intègre l'actif phare SILVER pour la protection couleur.",
     prix: 19167,
     prixDisplay: "191,67 €",
     image: "/images/product-shoot-white-v2.png",

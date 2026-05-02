@@ -243,7 +243,7 @@ export async function sendOrderNotification(params: OrderEmailParams) {
     from: `Lissage sur Mesure <${from}>`,
     to,
     replyTo: params.customerEmail,
-    subject: `Nouvelle commande — ${params.productName} (${total})`,
+    subject: `Nouvelle commande : ${params.productName} (${total})`,
     html: renderHtml(params),
     text: renderText(params),
   });

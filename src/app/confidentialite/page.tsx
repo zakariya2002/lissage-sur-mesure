@@ -117,10 +117,10 @@ export default function Confidentialite() {
               <li>L&apos;équipe Lissage sur Mesure (responsable de traitement)</li>
               <li>
                 Notre hébergeur&nbsp;: <strong>Vercel Inc.</strong> (340 S Lemon Ave #4133,
-                Walnut, CA 91789, États-Unis) — pour le stockage et la diffusion du site
+                Walnut, CA 91789, États-Unis), pour le stockage et la diffusion du site
               </li>
               <li>
-                Notre prestataire de paiement&nbsp;: <strong>Stripe</strong> — pour le
+                Notre prestataire de paiement&nbsp;: <strong>Stripe</strong>, pour le
                 traitement sécurisé des transactions liées aux commandes
               </li>
             </ul>
@@ -165,31 +165,31 @@ export default function Confidentialite() {
             </p>
             <ul className="mt-3 space-y-3">
               <li>
-                <strong>Droit d&apos;accès</strong> (art. 15 RGPD) — Obtenir la confirmation
+                <strong>Droit d&apos;accès</strong> (art. 15 RGPD) : Obtenir la confirmation
                 que vos données sont traitées et en recevoir une copie.
               </li>
               <li>
-                <strong>Droit de rectification</strong> (art. 16 RGPD) — Corriger des données
+                <strong>Droit de rectification</strong> (art. 16 RGPD) : Corriger des données
                 inexactes ou incomplètes.
               </li>
               <li>
-                <strong>Droit à l&apos;effacement</strong> (art. 17 RGPD) — Demander la
+                <strong>Droit à l&apos;effacement</strong> (art. 17 RGPD) : Demander la
                 suppression de vos données, sauf obligation légale de conservation.
               </li>
               <li>
-                <strong>Droit à la limitation du traitement</strong> (art. 18 RGPD) — Demander
+                <strong>Droit à la limitation du traitement</strong> (art. 18 RGPD) : Demander
                 la suspension temporaire du traitement.
               </li>
               <li>
-                <strong>Droit à la portabilité</strong> (art. 20 RGPD) — Recevoir vos données
+                <strong>Droit à la portabilité</strong> (art. 20 RGPD) : Recevoir vos données
                 dans un format structuré et couramment utilisé.
               </li>
               <li>
-                <strong>Droit d&apos;opposition</strong> (art. 21 RGPD) — Vous opposer au
+                <strong>Droit d&apos;opposition</strong> (art. 21 RGPD) : Vous opposer au
                 traitement pour des motifs légitimes.
               </li>
               <li>
-                <strong>Droit de retrait du consentement</strong> — Retirer votre consentement
+                <strong>Droit de retrait du consentement</strong> : Retirer votre consentement
                 à tout moment, sans que cela ne compromette la licéité du traitement fondé
                 sur le consentement effectué avant ce retrait.
               </li>
@@ -204,7 +204,7 @@ export default function Confidentialite() {
               <strong>Réclamation auprès de la CNIL :</strong> Si vous estimez que le
               traitement de vos données ne respecte pas la réglementation, vous pouvez
               introduire une réclamation auprès de la Commission Nationale de l&apos;Informatique
-              et des Libertés (CNIL) — www.cnil.fr.
+              et des Libertés (CNIL) : www.cnil.fr.
             </p>
           </section>
 
