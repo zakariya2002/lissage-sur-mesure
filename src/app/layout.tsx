@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, DM_Sans } from "next/font/google";
 import Script from "next/script";
+import SnapPixel from "@/components/SnapPixel";
 import "./globals.css";
 
 const UMAMI_ID = process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID;
@@ -214,6 +215,7 @@ export default function RootLayout({
             strategy="afterInteractive"
           />
         )}
+        <SnapPixel />
       </body>
     </html>
   );

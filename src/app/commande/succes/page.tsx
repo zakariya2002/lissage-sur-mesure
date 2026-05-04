@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { stripe } from "@/lib/stripe";
+import PurchaseTracker from "@/components/PurchaseTracker";
 
 export const metadata: Metadata = {
   title: "Commande confirmée | Lissage sur Mesure",
@@ -16,12 +17,14 @@ export default async function CommandeSucces({
 
   let customerEmail: string | null = null;
   let amountTotal: number | null = null;
+  let productId: string | undefined;
 
   if (session_id) {
     try {
       const session = await stripe.checkout.sessions.retrieve(session_id);
       customerEmail = session.customer_details?.email ?? null;
       amountTotal = session.amount_total;
+      productId = session.metadata?.productId;
     } catch {
       // Session introuvable — on affiche quand même le message générique
     }
@@ -29,6 +32,13 @@ export default async function CommandeSucces({
 
   return (
     <main className="min-h-screen bg-white pt-28 pb-20 flex items-center">
+      {session_id && amountTotal !== null && (
+        <PurchaseTracker
+          transactionId={session_id}
+          price={amountTotal / 100}
+          productId={productId}
+        />
+      )}
       <div className="max-w-xl mx-auto px-6 text-center">
         <div className="w-16 h-16 mx-auto mb-8 rounded-full border-2 border-[var(--color-black)] flex items-center justify-center">
           <svg className="w-8 h-8 text-[var(--color-black)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">

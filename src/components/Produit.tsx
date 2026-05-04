@@ -1,8 +1,10 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { snapTrack } from "@/lib/snap";
+import { getProductById } from "@/lib/products";
 
 /* ── Point de vente ── */
 const POINT_DE_VENTE = {
@@ -214,6 +216,17 @@ export default function Produit() {
     carouselRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
+  useEffect(() => {
+    const p = getProductById(packs[current].id);
+    if (!p) return;
+    snapTrack("VIEW_CONTENT", {
+      price: p.prix / 100,
+      currency: "EUR",
+      item_ids: [p.id],
+      item_category: "lissage",
+    });
+  }, [current]);
+
   const goPrev = () => {
     if (current > 0) goTo(current - 1);
   };
@@ -225,6 +238,16 @@ export default function Produit() {
   async function handleBuy(productId: string) {
     setCheckoutError(null);
     setLoadingId(productId);
+    const p = getProductById(productId);
+    if (p) {
+      snapTrack("START_CHECKOUT", {
+        price: p.prix / 100,
+        currency: "EUR",
+        item_ids: [p.id],
+        item_category: "lissage",
+        number_items: 1,
+      });
+    }
     try {
       const res = await fetch("/api/checkout", {
         method: "POST",

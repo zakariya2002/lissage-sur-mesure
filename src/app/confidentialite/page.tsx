@@ -21,7 +21,7 @@ export default function Confidentialite() {
           et à la loi Informatique et Libertés du 6 janvier 1978 modifiée.
         </p>
         <p className="text-[11px] text-[var(--color-gray-400)] tracking-wider uppercase mb-12">
-          Dernière mise à jour : mars 2026
+          Dernière mise à jour : mai 2026
         </p>
 
         <div className="space-y-10 text-[var(--color-gray-600)] text-sm leading-relaxed">
@@ -67,9 +67,12 @@ export default function Confidentialite() {
               b) Données de navigation
             </h3>
             <p>
-              À ce jour, aucun cookie de suivi analytique ou publicitaire n&apos;est déposé
-              sur ce site. Seuls des cookies strictement nécessaires au fonctionnement
-              technique du site peuvent être utilisés (voir section 7).
+              Sous réserve de votre consentement explicite (via le bandeau de cookies),
+              nous déposons des cookies de mesure publicitaire opérés par <strong>Snap Inc.</strong>{" "}
+              (Snapchat Pixel). Ces cookies permettent de mesurer la performance de nos
+              campagnes publicitaires sur Snapchat et de diffuser des publicités
+              personnalisées. Si vous refusez, seuls les cookies strictement nécessaires
+              au fonctionnement du site sont déposés (voir section 7).
             </p>
           </section>
 
@@ -122,6 +125,12 @@ export default function Confidentialite() {
               <li>
                 Notre prestataire de paiement&nbsp;: <strong>Stripe</strong>, pour le
                 traitement sécurisé des transactions liées aux commandes
+              </li>
+              <li>
+                Notre prestataire de mesure publicitaire&nbsp;: <strong>Snap Inc.</strong>{" "}
+                (Snapchat, 3000 31st Street, Santa Monica, CA 90405, États-Unis), uniquement
+                après votre consentement explicite, pour la mesure et l&apos;optimisation
+                de nos campagnes publicitaires
               </li>
             </ul>
             <p className="mt-3">
@@ -225,12 +234,22 @@ export default function Confidentialite() {
             <h3 className="font-semibold text-[var(--color-black)] mt-6 mb-2">
               Cookies utilisés sur ce site
             </h3>
-            <div className="mt-3 border border-[var(--color-gray-200)] p-4">
-              <p className="text-[var(--color-black)] font-mono text-xs mb-2">lsm_cookie_consent</p>
-              <div className="flex flex-col sm:flex-row sm:gap-6 gap-1 text-xs text-[var(--color-gray-500)]">
-                <span><strong className="text-[var(--color-gray-600)]">Type :</strong> Strictement nécessaire</span>
-                <span><strong className="text-[var(--color-gray-600)]">Finalité :</strong> Mémoriser votre choix en matière de cookies</span>
-                <span><strong className="text-[var(--color-gray-600)]">Durée :</strong> 13 mois</span>
+            <div className="mt-3 space-y-3">
+              <div className="border border-[var(--color-gray-200)] p-4">
+                <p className="text-[var(--color-black)] font-mono text-xs mb-2">lsm_cookie_consent</p>
+                <div className="flex flex-col sm:flex-row sm:gap-6 gap-1 text-xs text-[var(--color-gray-500)]">
+                  <span><strong className="text-[var(--color-gray-600)]">Type :</strong> Strictement nécessaire</span>
+                  <span><strong className="text-[var(--color-gray-600)]">Finalité :</strong> Mémoriser votre choix en matière de cookies</span>
+                  <span><strong className="text-[var(--color-gray-600)]">Durée :</strong> 13 mois</span>
+                </div>
+              </div>
+              <div className="border border-[var(--color-gray-200)] p-4">
+                <p className="text-[var(--color-black)] font-mono text-xs mb-2">_scid, _scid_r, sc_at (Snap Pixel)</p>
+                <div className="flex flex-col sm:flex-row sm:gap-6 gap-1 text-xs text-[var(--color-gray-500)]">
+                  <span><strong className="text-[var(--color-gray-600)]">Type :</strong> Publicitaire (soumis à consentement)</span>
+                  <span><strong className="text-[var(--color-gray-600)]">Finalité :</strong> Mesure et optimisation des campagnes publicitaires Snapchat</span>
+                  <span><strong className="text-[var(--color-gray-600)]">Durée :</strong> Jusqu&apos;à 13 mois</span>
+                </div>
               </div>
             </div>
 

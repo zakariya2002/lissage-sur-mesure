@@ -22,6 +22,7 @@ export default function CookieBanner() {
   const handleAccept = () => {
     localStorage.setItem("lsm_cookie_consent", "accepted");
     localStorage.setItem("lsm_cookie_consent_date", new Date().toISOString());
+    window.dispatchEvent(new CustomEvent("lsm:consent-accepted"));
     setVisible(false);
   };
 
@@ -48,9 +49,9 @@ export default function CookieBanner() {
                   Respect de votre vie privée
                 </p>
                 <p className="text-xs text-white/60 leading-relaxed">
-                  Ce site utilise uniquement des cookies strictement nécessaires à son
-                  fonctionnement. Aucun cookie publicitaire ou de suivi n&apos;est déposé.
-                  Pour en savoir plus, consultez notre{" "}
+                  Nous utilisons des cookies pour mesurer l&apos;audience et personnaliser nos
+                  publicités (Snapchat). Vous pouvez refuser&nbsp;: seuls les cookies
+                  strictement nécessaires resteront actifs. En savoir plus dans notre{" "}
                   <a
                     href="/confidentialite#cookies"
                     className="text-white underline hover:text-white/80 transition-colors"
